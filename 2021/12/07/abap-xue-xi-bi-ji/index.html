@@ -1,0 +1,1519 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="ABAP学习笔记, fun-ny Blog">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>ABAP学习笔记 | fun-ny Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">fun-ny Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">fun-ny Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://imag.fun-ny.cn/20418100_1638881942.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">ABAP学习笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/ABAP/">
+                                <span class="chip bg-color">ABAP</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/ABAP/" class="post-category">
+                                ABAP
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-12-07
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-12-07
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="ABAP学习笔记"><a href="#ABAP学习笔记" class="headerlink" title="ABAP学习笔记"></a>ABAP学习笔记</h1><h2 id="开发命名规则"><a href="#开发命名规则" class="headerlink" title="开发命名规则"></a>开发命名规则</h2><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130084748528-352125035.png" alt="image"></p>
+<h2 id="常用Tcode"><a href="#常用Tcode" class="headerlink" title="常用Tcode"></a>常用Tcode</h2><table>
+<thead>
+<tr>
+<th align="center">事务代码</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">se11</td>
+<td align="center">数据字典管理</td>
+</tr>
+<tr>
+<td align="center">se16</td>
+<td align="center">查看表数据</td>
+</tr>
+<tr>
+<td align="center">sm30</td>
+<td align="center">查看数据，需要表维护生成器</td>
+</tr>
+<tr>
+<td align="center">sm12</td>
+<td align="center">选择锁定条目</td>
+</tr>
+<tr>
+<td align="center">se37</td>
+<td align="center">函数构造器</td>
+</tr>
+<tr>
+<td align="center">mm03</td>
+<td align="center">显示物料</td>
+</tr>
+<tr>
+<td align="center">zmaterial</td>
+<td align="center">物料主数据清单</td>
+</tr>
+<tr>
+<td align="center">se91</td>
+<td align="center">消息维护</td>
+</tr>
+<tr>
+<td align="center">se93</td>
+<td align="center">创建事务码</td>
+</tr>
+<tr>
+<td align="center">se41</td>
+<td align="center">创建GUI状态</td>
+</tr>
+</tbody></table>
+<h2 id="ABAP语法"><a href="#ABAP语法" class="headerlink" title="ABAP语法"></a>ABAP语法</h2><h3 id="预定义数据类型"><a href="#预定义数据类型" class="headerlink" title="预定义数据类型"></a>预定义数据类型</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130084822575-922962803.png" alt="image"></p>
+<h3 id="自定义数据类型"><a href="#自定义数据类型" class="headerlink" title="自定义数据类型"></a>自定义数据类型</h3><p>使用关键字<code>types</code>定义，如下定义了名称为gty_out的数据类型</p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">TYPES</span><span class="token punctuation">:</span> <span class="token keyword">BEGIN</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">,</span>
+         light    <span class="token keyword">TYPE</span> icon_d<span class="token punctuation">,</span> <span class="token eol-comment comment">" 警示灯</span>
+         werks    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>werks<span class="token punctuation">,</span> <span class="token eol-comment comment">" 工厂代码</span>
+         matnr    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>matnr<span class="token punctuation">,</span> <span class="token eol-comment comment">" 物料编码</span>
+       <span class="token keyword">END</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h3><p> 语法如下：类型声明使用关键字<code>like</code>或者<code>type</code><br> <img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130084932348-814429969.png" alt="image"></p>
+<blockquote>
+<p>TYPE 和 LIKE的区别</p>
+<ul>
+<li>like用在已有值的数据类型，如系统变量，而type则用在定义数据类型。</li>
+</ul>
+</blockquote>
+<h3 id="变量命名规范"><a href="#变量命名规范" class="headerlink" title="变量命名规范"></a>变量命名规范</h3><p>*G: GLOBAL  L:LOCAL   V: VARIABLE    W: WORKAREA     S:SPACE<br>*T: TABLE     TY: TYPE       C: CONSTANT<br>*全局变量 GV_<br>*临时变量 LV_<br>*全局工作区 GW_<br>*临时工作区 LW_<br>*全局内表   GT_<br>*临时内表   LT_<br>*程序定义类型 TY_</p>
+<p>*全局内表   GT_<br>*临时内表   LT_<br>*程序定义类型 TY_<br>*全局常量   GC_<br>*临时常量   LC_</p>
+<h3 id="常用系统变量"><a href="#常用系统变量" class="headerlink" title="常用系统变量"></a>常用系统变量</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085018646-884231381.png" alt="image"></p>
+<h3 id="变量赋值"><a href="#变量赋值" class="headerlink" title="变量赋值"></a>变量赋值</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085129927-201485113.png" alt="image"></p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">data</span><span class="token punctuation">:</span>f1 <span class="token keyword">type</span> <span class="token keyword">c</span><span class="token punctuation">,</span>
+  f2 <span class="token keyword">type</span> <span class="token keyword">c</span><span class="token punctuation">.</span>
+f1 <span class="token operator">=</span> <span class="token string">'法外狂徒张三'</span><span class="token punctuation">.</span>
+f2 <span class="token operator">=</span> f1<span class="token punctuation">.</span>
+<span class="token comment">* 或者</span>
+<span class="token keyword">move</span> f1 <span class="token keyword">to</span> f2<span class="token punctuation">.</span>
+<span class="token comment">* 或者</span>
+<span class="token keyword">write</span> f1 <span class="token keyword">to</span> f2<span class="token punctuation">.</span>
+<span class="token comment">*偏移量取值</span>
+f2 <span class="token operator">=</span> f1+<span class="token number">1</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>"f2的值为 外狂<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="常量定义"><a href="#常量定义" class="headerlink" title="常量定义"></a>常量定义</h3><p>使用关键字<code>CONSTANTS</code></p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">constants</span> pi p <span class="token keyword">decimals</span> <span class="token number">5</span> <span class="token keyword">value</span> <span class="token string">'3.14159'</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="数据输出格式"><a href="#数据输出格式" class="headerlink" title="数据输出格式"></a>数据输出格式</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085245089-1288404926.png" alt="image"></p>
+<p>skip 产生空白行</p>
+<h3 id="数值处理"><a href="#数值处理" class="headerlink" title="数值处理"></a>数值处理</h3><h4 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h4><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085333399-789701384.png" alt="image"></p>
+<h4 id="算数运算"><a href="#算数运算" class="headerlink" title="算数运算"></a>算数运算</h4><p>算数运算符号</p>
+<table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">*</td>
+<td align="center">乘</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">除（整数除法）</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">加</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">减</td>
+</tr>
+<tr>
+<td align="center">DIV</td>
+<td align="center">整数除法</td>
+</tr>
+<tr>
+<td align="center">MOD</td>
+<td align="center">余数除法</td>
+</tr>
+</tbody></table>
+<p>ABAP预定义函数</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085408977-2145068446.png" alt="image"></p>
+<h4 id="字符串处理"><a href="#字符串处理" class="headerlink" title="字符串处理"></a>字符串处理</h4><ul>
+<li>字符串移位操作</li>
+</ul>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token comment">*左移三位</span>
+<span class="token keyword">data</span> LV_STRING1 <span class="token keyword">TYPE</span> String <span class="token keyword">value</span> <span class="token string">'abcdefg'</span><span class="token punctuation">.</span>
+<span class="token keyword">shift</span> LV_STRING1 <span class="token keyword">BY</span> <span class="token number">3</span> <span class="token keyword">PLACES</span> <span class="token keyword">LEFT</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>字符串替换</li>
+</ul>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">DATA</span><span class="token punctuation">:</span> lv_string2 <span class="token keyword">TYPE</span> string <span class="token keyword">VALUE</span> <span class="token string">'abcdefg'</span><span class="token punctuation">,</span>
+      lv_string3 <span class="token keyword">TYPE</span> string <span class="token keyword">VALUE</span> <span class="token string">'a'</span><span class="token punctuation">,</span>
+      lv_string4 <span class="token keyword">TYPE</span> string <span class="token keyword">VALUE</span> <span class="token string">'c'</span><span class="token punctuation">.</span>
+<span class="token comment">*用string_4替换lv_String2中lv_String3</span>
+<span class="token keyword">REPLACE</span> lv_string3 <span class="token keyword">WITH</span> lv_string4 <span class="token keyword">INTO</span> lv_string2<span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>字符串大小写转换</li>
+</ul>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">TRANSLATE</span> LV_STRING2 <span class="token keyword">TO</span> <span class="token keyword">UPPER</span> <span class="token keyword">CASE</span>/ <span class="token keyword">TO</span> <span class="token keyword">LOWER</span> <span class="token keyword">CASE</span><span class="token punctuation">.</span>      <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h3 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h3><ul>
+<li><code>case</code>类似Java是switch</li>
+<li><code>do</code> 类似java的do while</li>
+</ul>
+<h3 id="Message"><a href="#Message" class="headerlink" title="Message"></a>Message</h3><pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">message</span> e005<span class="token punctuation">(</span>ymess<span class="token punctuation">)</span><span class="token punctuation">.</span>"e表示消息类型为error  <span class="token number">005</span>表示ymess消息类的<span class="token number">005</span>编号对应的消息
+<span class="token keyword">message</span> e005<span class="token punctuation">(</span>ymess<span class="token punctuation">)</span> <span class="token keyword">display</span> <span class="token keyword">like</span> <span class="token string">'I'</span><span class="token punctuation">.</span>"以信息格式显示错误信息<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>消息类型：</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085445574-323427599.png" alt="image"></p>
+<h3 id="内表"><a href="#内表" class="headerlink" title="内表"></a>内表</h3><blockquote>
+<p>内表是内存中建立的一个临时表，你可以在程序运行时对表中的数据进行，插入，修改，删除等操作，程序跑完了，就会被释放。</p>
+<p>内表一共有三种类型</p>
+<ul>
+<li><p>standard   标准表</p>
+</li>
+<li><p>sorted       排序表</p>
+</li>
+<li><p>hashed     哈希表</p>
+<p>标准表在增加或插入数据行时并不对数据行的地址进行重新排序存储。</p>
+<p>排序表在增加和插入数据行时要对数据存储的地址进行重新排列。</p>
+<p>哈希表只能通过关键字进行访问，在检索数据里与数据行数无关。 </p>
+</li>
+</ul>
+</blockquote>
+<p>**工作区:**内表按照行进行访问，必须使用某个区域作为与表格互相传输的接口。</p>
+<p><strong>从内表中读取数据时,已定址的行内容覆盖工作区的内容。将数据写入内表时，必须首先在工作区中输入数据。</strong></p>
+<h4 id="内表定义"><a href="#内表定义" class="headerlink" title="内表定义"></a>内表定义</h4><p>自定义类型创建内表：</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085524296-1506172830.png" alt="image"></p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token comment">*定义内表</span>
+<span class="token comment">*方法一：</span>
+<span class="token keyword">TYPES</span><span class="token punctuation">:</span> <span class="token keyword">BEGIN</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">,</span>  <span class="token eol-comment comment">"定义结构类型</span>
+         light    <span class="token keyword">TYPE</span> icon_d<span class="token punctuation">,</span> <span class="token eol-comment comment">" 警示灯</span>
+         werks    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>werks<span class="token punctuation">,</span> <span class="token eol-comment comment">" 工厂代码</span>
+         matnr    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>matnr<span class="token punctuation">,</span> <span class="token eol-comment comment">" 物料编码</span>
+       <span class="token keyword">END</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">.</span>
+<span class="token keyword">data</span> gt_table <span class="token keyword">type</span> <span class="token keyword">standard</span> <span class="token keyword">table</span> <span class="token keyword">of</span> gty_out [with <span class="token keyword">header</span> <span class="token keyword">line</span>]<span class="token punctuation">.</span> <span class="token eol-comment comment">"定义带有同名工作区的内表，名称后加[] 表示明确使用内表</span>
+<span class="token comment">*方法二：</span>
+<span class="token keyword">TYPES</span><span class="token punctuation">:</span> <span class="token keyword">BEGIN</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">,</span>  <span class="token eol-comment comment">"定义结构类型</span>
+         light    <span class="token keyword">TYPE</span> icon_d<span class="token punctuation">,</span> <span class="token eol-comment comment">" 警示灯</span>
+         werks    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>werks<span class="token punctuation">,</span> <span class="token eol-comment comment">" 工厂代码</span>
+         matnr    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>matnr<span class="token punctuation">,</span> <span class="token eol-comment comment">" 物料编码</span>
+       <span class="token keyword">END</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">.</span>
+<span class="token keyword">types</span> ： gty_t_out <span class="token keyword">type</span> gty_out <span class="token keyword">occurs</span> <span class="token number">1</span><span class="token punctuation">.</span>"定义表结构
+<span class="token keyword">data</span> ： gt_table <span class="token keyword">type</span> gty_t_out<span class="token punctuation">.</span>
+<span class="token comment">*方法三：使用data直接定义内表，这种方式会创建同名工作区</span>
+<span class="token keyword">data</span><span class="token punctuation">:</span> <span class="token keyword">BEGIN</span> <span class="token keyword">OF</span> gty_out <span class="token keyword">occurs</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token eol-comment comment">"初始容量为0</span>
+         light    <span class="token keyword">TYPE</span> icon_d<span class="token punctuation">,</span> <span class="token eol-comment comment">" 警示灯</span>
+         werks    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>werks<span class="token punctuation">,</span> <span class="token eol-comment comment">" 工厂代码</span>
+         matnr    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>matnr<span class="token punctuation">,</span> <span class="token eol-comment comment">" 物料编码</span>
+       <span class="token keyword">END</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">.</span>   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="内表数据处理"><a href="#内表数据处理" class="headerlink" title="内表数据处理"></a>内表数据处理</h4><ul>
+<li>内表初始化</li>
+</ul>
+<p><strong>clear和refresh</strong>关键字</p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">data</span><span class="token punctuation">:</span> <span class="token keyword">BEGIN</span> <span class="token keyword">OF</span> gty_out <span class="token keyword">occurs</span> <span class="token number">0</span><span class="token punctuation">,</span>  <span class="token eol-comment comment">"初始容量为0</span>
+         light    <span class="token keyword">TYPE</span> icon_d<span class="token punctuation">,</span> <span class="token eol-comment comment">" 警示灯</span>
+         werks    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>werks<span class="token punctuation">,</span> <span class="token eol-comment comment">" 工厂代码</span>
+         matnr    <span class="token keyword">LIKE</span> zmmt0036a<span class="token token-operator punctuation">-</span>matnr<span class="token punctuation">,</span> <span class="token eol-comment comment">" 物料编码</span>
+       <span class="token keyword">END</span> <span class="token keyword">OF</span> gty_out<span class="token punctuation">.</span>  
+<span class="token comment">*带工作区的内表</span>
+<span class="token keyword">clear</span> gty_table<span class="token punctuation">.</span>"清空工作区
+<span class="token keyword">clear</span> gty_table[]"清空内表
+<span class="token keyword">refresh</span> gty_table   <span class="token eol-comment comment">"清空内表</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li><p>增加数据</p>
+<p>单行插入</p>
+</li>
+</ul>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085610064-210790987.png" alt="image"></p>
+<p>要将内表仅用于存储数据，出于性能方面的考虑,建议使用APPEND。<br>要计算数字字段之和或要确保内表中没有出现重复条目,请使用COLLECT语句。<br>要在内表现有行之前插入新行，请使用INSERT语句。</p>
+<p>​     多行插入</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085631268-121268244.png" alt="image"></p>
+<p>要将内表行附加到另一个内表中，请使用APPEND语句。</p>
+<p>要将内表行插入另一个内表中,请使用INSERT语句。<br>要将内表条目内容复制到另一个内表中，并且覆盖该目标表格，请使用MOVE语句。</p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">append</span> <span class="token keyword">LINES</span> <span class="token keyword">OF</span> it_table1  <span class="token keyword">to</span> it_table2<span class="token punctuation">.</span> <span class="token eol-comment comment">"把it_table1中的数据插入到it_table2中</span>
+<span class="token keyword">append</span> <span class="token keyword">LINES</span> <span class="token keyword">OF</span> it_table1  <span class="token keyword">from</span> <span class="token number">1</span> <span class="token keyword">to</span> <span class="token number">10</span>  <span class="token keyword">to</span> it_table2<span class="token punctuation">.</span> <span class="token eol-comment comment">"把it_table1中的1到10行插入到it_table2中</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<ul>
+<li>修改数据</li>
+</ul>
+<p>第一种方式更行当前行所有字段，第二种方式只更新指定字段</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085652291-693405608.png" alt="image"></p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">MODIFY</span> it_table1 <span class="token keyword">from</span> wa_table <span class="token keyword">INDEX</span> <span class="token number">1</span><span class="token punctuation">.</span>"更行指定索引行的所有字段
+<span class="token keyword">MODIFY</span> it_table1 <span class="token keyword">from</span> wa_table <span class="token keyword">INDEX</span> <span class="token number">2</span> <span class="token keyword">TRANSPORTING</span> <span class="token keyword">name</span><span class="token punctuation">.</span> <span class="token eol-comment comment">"更新指定索引行的指定字段</span>
+<span class="token keyword">MODIFY</span> it_table1 <span class="token keyword">from</span> wa_table  <span class="token keyword">TRANSPORTING</span> <span class="token keyword">name</span> <span class="token keyword">where</span> <span class="token keyword">name</span> <span class="token operator">=</span> <span class="token string">'zhangsan'</span><span class="token punctuation">.</span>  <span class="token eol-comment comment">"根据条件更新字段 </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>删除数据</li>
+</ul>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085708257-1312960812.png" alt="image"></p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">DELETE</span> it_table1 <span class="token keyword">WHERE</span> telephone <span class="token operator">=</span> <span class="token number">111111111111</span><span class="token punctuation">.</span>
+<span class="token keyword">DELETE</span> <span class="token keyword">TABLE</span> it_table1 <span class="token keyword">FROM</span> wa_table<span class="token punctuation">.</span>
+<span class="token keyword">DELETE</span> it_table1 <span class="token keyword">INDEX</span> <span class="token number">1</span><span class="token punctuation">.</span>
+<span class="token keyword">DELETE</span> <span class="token keyword">ADJACENT</span> <span class="token keyword">DUPLICATES</span> <span class="token keyword">FROM</span> it_table1<span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>排序</li>
+</ul>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">SORT</span> it_table1 <span class="token keyword">by</span> <span class="token keyword">name</span> telephone <span class="token keyword">ASCENDING</span>/DESCENDING<span class="token punctuation">.</span>  <span class="token eol-comment comment">"默认升序排序</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<ul>
+<li>读取内表数据<ul>
+<li><strong>READ：</strong>依据具体行数或字段值等条件读取某一内表的数据</li>
+<li><strong>LOOP：</strong>循环常用于实现内表数据的循环读取和操作</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>使用READ操作的表必须得HEADER LINE作为查找出的数据存储窗口<br>BINARY SEARCH可以提高内表数据查找的速度,但是使用前必须先对内表进行排序</p>
+</blockquote>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token comment">*READ语法：</span>
+<span class="token keyword">read</span> <span class="token keyword">table</span> it_table1 <span class="token keyword">into</span> wa<span class="token punctuation">.</span>
+<span class="token keyword">read</span> <span class="token keyword">table</span> it_table1 <span class="token keyword">into</span> wa <span class="token keyword">with</span> <span class="token keyword">key</span> k1 <span class="token operator">=</span> v1 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>kn= vn [binary <span class="token keyword">search</span>]  <span class="token eol-comment comment">"指定条件读取</span>
+<span class="token keyword">read</span> <span class="token keyword">table</span> it_table1 <span class="token keyword">into</span> wa <span class="token keyword">index</span> <span class="token keyword">i</span><span class="token punctuation">.</span>"指定下标读取
+<span class="token comment">*LOOP语法：</span>
+<span class="token keyword">loop</span> <span class="token keyword">at</span> it_table1 <span class="token keyword">into</span> wa <span class="token keyword">from</span> <span class="token number">1</span> <span class="token keyword">to</span> <span class="token number">10</span><span class="token punctuation">.</span>  <span class="token eol-comment comment">"读取内标的1-10行数据</span>
+<span class="token keyword">write</span> <span class="token punctuation">:</span> <span class="token operator">/</span> wa<span class="token token-operator punctuation">-</span>name<span class="token punctuation">.</span>
+<span class="token keyword">endloop</span><span class="token punctuation">.</span>
+<span class="token keyword">loop</span> <span class="token keyword">at</span> it_table <span class="token keyword">into</span> wa <span class="token keyword">where</span> <span class="token keyword">name</span> <span class="token operator">=</span> <span class="token string">'张三'</span><span class="token punctuation">.</span>
+<span class="token keyword">write</span> <span class="token punctuation">:</span> <span class="token operator">/</span> wa<span class="token token-operator punctuation">-</span>name<span class="token punctuation">.</span>
+<span class="token keyword">endloop</span><span class="token punctuation">.</span>
+<span class="token comment">*带工作区的内表</span>
+<span class="token keyword">DATA</span><span class="token punctuation">:</span> it_table3 <span class="token keyword">TYPE</span> <span class="token keyword">STANDARD</span> <span class="token keyword">TABLE</span> <span class="token keyword">OF</span> it_table <span class="token keyword">with</span> <span class="token keyword">HEADER</span> <span class="token keyword">LINE</span><span class="token punctuation">.</span>
+it_table3<span class="token token-operator punctuation">-</span>name <span class="token operator">=</span> <span class="token string">'aa'</span><span class="token punctuation">.</span>
+it_table3<span class="token token-operator punctuation">-</span>telephone <span class="token operator">=</span> <span class="token number">123456789</span><span class="token punctuation">.</span>
+it_table3<span class="token token-operator punctuation">-</span>age <span class="token operator">=</span> <span class="token number">11</span><span class="token punctuation">.</span>
+<span class="token keyword">append</span> it_table3<span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>分组遍历</p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token comment">*  分组循环 按照vkbur vkgrp分组，分别进行求和，退货订单金额先取负数再求和</span>
+  <span class="token keyword">LOOP</span> <span class="token keyword">AT</span> lt_table <span class="token keyword">INTO</span> <span class="token keyword">DATA</span><span class="token punctuation">(</span>wa_table<span class="token punctuation">)</span> <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> <span class="token punctuation">(</span> vkbur <span class="token operator">=</span> wa_table<span class="token token-operator punctuation">-</span>vkbur vkgrp <span class="token operator">=</span> wa_table<span class="token token-operator punctuation">-</span>vkgrp  <span class="token punctuation">)</span><span class="token punctuation">.</span>
+    <span class="token keyword">CLEAR</span> <span class="token keyword">table</span><span class="token punctuation">.</span>
+    <span class="token keyword">LOOP</span> <span class="token keyword">AT</span> <span class="token keyword">GROUP</span> wa_table <span class="token keyword">INTO</span> <span class="token keyword">DATA</span><span class="token punctuation">(</span>group<span class="token punctuation">)</span><span class="token punctuation">.</span>
+      <span class="token keyword">IF</span> <span class="token keyword">group</span>-auart <span class="token operator">=</span> <span class="token string">'ZRE'</span><span class="token punctuation">.</span>
+        <span class="token keyword">group</span>-kzwi1sum <span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">-</span> <span class="token keyword">group</span>-kzwi1sum<span class="token punctuation">.</span>
+      <span class="token keyword">ENDIF</span><span class="token punctuation">.</span>
+      <span class="token keyword">table</span>-kzwi1sum <span class="token operator">=</span> <span class="token keyword">table</span>-kzwi1sum <span class="token operator">+</span> <span class="token keyword">group</span>-kzwi1sum<span class="token punctuation">.</span>
+    <span class="token keyword">ENDLOOP</span><span class="token punctuation">.</span>
+    <span class="token keyword">table</span>-vkbur <span class="token operator">=</span> wa_table<span class="token token-operator punctuation">-</span>vkbur<span class="token punctuation">.</span>
+    <span class="token keyword">table</span>-vkgrp <span class="token operator">=</span> wa_table<span class="token token-operator punctuation">-</span>vkgrp<span class="token punctuation">.</span>
+    <span class="token keyword">APPEND</span>  <span class="token keyword">table</span><span class="token punctuation">.</span>
+  <span class="token keyword">ENDLOOP</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="OpenSQL"><a href="#OpenSQL" class="headerlink" title="OpenSQL"></a>OpenSQL</h2><h3 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085746854-965864038.png" alt="image"></p>
+<h3 id="新增数据"><a href="#新增数据" class="headerlink" title="新增数据"></a>新增数据</h3><p>从内表中批量插入数据</p>
+<p>从工作区中插入单条数据</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085817029-1449669258.png" alt="image"></p>
+<pre class="line-numbers language-ABAP" data-language="ABAP"><code class="language-ABAP">data fli_table type table of spfli with HEADER LINE.
+select SINGLE * from  spfli INTO CORRESPONDING FIELDS OF fli_table  where connid = 4305 and carrid = 'AA'.
+fli_table-connid = 4305.
+INSERT  spfli from fli_table.
+CHECK sy-subrc = 0.
+write:/ '插入成功'.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><p>根据条件删除</p>
+<p>删除整表数据</p>
+<p>根据内表中的数据删除数据</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085840308-1242358485.png" alt="image"></p>
+<h3 id="更新数据（update）"><a href="#更新数据（update）" class="headerlink" title="更新数据（update）"></a>更新数据（update）</h3><p>根据条件更新</p>
+<p>根据内表的数据更新</p>
+<p>根据工作区的内容更新</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085932156-1583979279.png" alt="image"></p>
+<h3 id="MODIFY"><a href="#MODIFY" class="headerlink" title="MODIFY"></a>MODIFY</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130085951666-831059593.png" alt="image"></p>
+<h3 id="FOR-ALL-ENTRIES-IN"><a href="#FOR-ALL-ENTRIES-IN" class="headerlink" title="FOR ALL ENTRIES IN"></a>FOR ALL ENTRIES IN</h3><p>以内表中某字段的值为条件，在数据库表中取数</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090007162-154333875.png" alt="image"></p>
+<h3 id="SQL优化"><a href="#SQL优化" class="headerlink" title="SQL优化"></a>SQL优化</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090015883-1797851523.png" alt="image"></p>
+<h3 id="sql-查询函数"><a href="#sql-查询函数" class="headerlink" title="sql  查询函数"></a>sql  查询函数</h3><ul>
+<li><code>coalesce( name1,name2,name3,name3 )</code>   取参数中第一个不为空的值</li>
+</ul>
+<h2 id="ALV"><a href="#ALV" class="headerlink" title="ALV"></a>ALV</h2><h3 id="ALV开发基本流程"><a href="#ALV开发基本流程" class="headerlink" title="ALV开发基本流程"></a>ALV开发基本流程</h3><p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090045660-418722225.png" alt="image"></p>
+<p>LAYOUT-ALV使用默认配置</p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token comment">*&amp;---------------------------------------------------------------------*</span>
+<span class="token comment">*&amp; Report YMMR0005</span>
+<span class="token comment">*&amp;---------------------------------------------------------------------*</span>
+<span class="token comment">*&amp;</span>
+<span class="token comment">*&amp;---------------------------------------------------------------------*</span>
+<span class="token keyword">REPORT</span> ymmr0005<span class="token punctuation">.</span>
+<span class="token keyword">TABLES</span><span class="token punctuation">:</span>vbak<span class="token punctuation">,</span>vbap<span class="token punctuation">.</span>
+<span class="token comment">*声明alv相关变量</span>
+<span class="token keyword">TYPE-POOLS</span> slis<span class="token punctuation">.</span>
+<span class="token keyword">DATA</span><span class="token punctuation">:</span> zlt_fildcat <span class="token keyword">TYPE</span> slis_t_fieldcat_alv <span class="token keyword">WITH</span> <span class="token keyword">HEADER</span> <span class="token keyword">LINE</span><span class="token punctuation">,</span> <span class="token eol-comment comment">"定义内表和同名工作区</span>
+      zls_layout  <span class="token keyword">TYPE</span> slis_layout_alv<span class="token punctuation">.</span> <span class="token eol-comment comment">"alv格式控制结构体：layout</span>
+<span class="token comment">*定义内表</span>
+<span class="token keyword">TYPES</span><span class="token punctuation">:</span>BEGIN <span class="token keyword">OF</span> ty_alvshow<span class="token punctuation">,</span>
+        vbeln <span class="token keyword">TYPE</span> vbak<span class="token token-operator punctuation">-</span>vbeln<span class="token punctuation">,</span>
+        erdat <span class="token keyword">TYPE</span> vbak<span class="token token-operator punctuation">-</span>erdat<span class="token punctuation">,</span>
+        ernam <span class="token keyword">TYPE</span> vbak<span class="token token-operator punctuation">-</span>ernam<span class="token punctuation">,</span>
+        kunnr <span class="token keyword">TYPE</span> vbak<span class="token token-operator punctuation">-</span>kunnr<span class="token punctuation">,</span>
+        posnr <span class="token keyword">TYPE</span> vbap<span class="token token-operator punctuation">-</span>posnr<span class="token punctuation">,</span>
+        matnr <span class="token keyword">TYPE</span> vbap<span class="token token-operator punctuation">-</span>matnr<span class="token punctuation">,</span>
+        matkl <span class="token keyword">TYPE</span> vbap<span class="token token-operator punctuation">-</span>matkl<span class="token punctuation">,</span>
+        zmeng <span class="token keyword">TYPE</span> vbap<span class="token token-operator punctuation">-</span>zmeng<span class="token punctuation">,</span>
+        werks <span class="token keyword">TYPE</span> vbap<span class="token token-operator punctuation">-</span>werks<span class="token punctuation">,</span>
+        lgort <span class="token keyword">TYPE</span> vbap<span class="token token-operator punctuation">-</span>lgort<span class="token punctuation">,</span>
+      <span class="token keyword">END</span> <span class="token keyword">OF</span> ty_alvshow<span class="token punctuation">.</span>
+<span class="token keyword">DATA</span><span class="token punctuation">:</span> gt_table <span class="token keyword">TYPE</span> <span class="token keyword">STANDARD</span> <span class="token keyword">TABLE</span> <span class="token keyword">OF</span> ty_alvshow<span class="token punctuation">,</span>
+      wa_table <span class="token keyword">TYPE</span> ty_alvshow<span class="token punctuation">.</span>
+
+
+<span class="token keyword">SELECT</span> k<span class="token token-operator punctuation">~</span>vbeln
+      k<span class="token token-operator punctuation">~</span>erdat
+      k<span class="token token-operator punctuation">~</span>ernam
+      kunnr
+      posnr
+      matnr
+      matkl
+      zmeng
+      werks
+      lgort
+      <span class="token keyword">FROM</span> vbak <span class="token keyword">AS</span> k  <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> vbap <span class="token keyword">AS</span> p <span class="token keyword">ON</span> k<span class="token token-operator punctuation">~</span>vbeln <span class="token operator">=</span> p<span class="token token-operator punctuation">~</span>vbeln
+      <span class="token keyword">INTO</span> <span class="token keyword">CORRESPONDING</span> <span class="token keyword">FIELDS</span> <span class="token keyword">OF</span> <span class="token keyword">TABLE</span> gt_table<span class="token punctuation">.</span>
+
+<span class="token keyword">DEFINE</span> append_fieldcat_filed<span class="token punctuation">.</span>
+  <span class="token keyword">CLEAR</span> zlt_fildcat<span class="token punctuation">.</span>
+   zlt_fildcat<span class="token token-operator punctuation">-</span>fieldname    <span class="token operator">=</span> &amp;<span class="token number">1</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>tabname      <span class="token operator">=</span> <span class="token string">'GT_ALV'</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>reptext_ddic <span class="token operator">=</span> &amp;<span class="token number">2</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>seltext_l    <span class="token operator">=</span> &amp;<span class="token number">2</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>seltext_m    <span class="token operator">=</span> &amp;<span class="token number">2</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>seltext_s    <span class="token operator">=</span> &amp;<span class="token number">2</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>cfieldname   <span class="token operator">=</span> &amp;<span class="token number">3</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>ctabname     <span class="token operator">=</span> &amp;<span class="token number">4</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>no_out       <span class="token operator">=</span> &amp;<span class="token number">5</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>no_zero      <span class="token operator">=</span> &amp;<span class="token number">6</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>outputlen    <span class="token operator">=</span> &amp;<span class="token number">7</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>qfieldname   <span class="token operator">=</span> &amp;<span class="token number">8</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>just         <span class="token operator">=</span> &amp;<span class="token number">9</span><span class="token punctuation">.</span>
+      zlt_fildcat<span class="token token-operator punctuation">-</span>ddictxt      <span class="token operator">=</span> <span class="token string">'L'</span><span class="token punctuation">.</span>
+      <span class="token keyword">append</span> zlt_fildcat<span class="token punctuation">.</span>
+<span class="token keyword">end-of-DEFINITION</span><span class="token punctuation">.</span>
+<span class="token keyword">REFRESH</span> zlt_fildcat<span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'vbeln'</span> <span class="token string">'销售凭证'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'erdat'</span> <span class="token string">'销售日期'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'ernam'</span> <span class="token string">'销售人'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'kunnr'</span> <span class="token string">'售达方'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'posnr'</span> <span class="token string">'项目编码'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'matnr'</span> <span class="token string">'物料'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'matkl'</span> <span class="token string">'物料组'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'zmeng'</span> <span class="token string">'销售数量'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'werks'</span> <span class="token string">'单位'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+append_fieldcat_filed <span class="token string">'lgort'</span> <span class="token string">'plant'</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span> <span class="token string">''</span><span class="token punctuation">.</span>
+<span class="token keyword">CALL</span> <span class="token keyword">FUNCTION</span> <span class="token string">'REUSE_ALV_GRID_DISPLAY'</span>
+  <span class="token keyword">EXPORTING</span>
+    is_layout     <span class="token operator">=</span> zls_layout
+    it_fieldcat   <span class="token operator">=</span> zlt_fildcat[]
+  <span class="token keyword">TABLES</span>
+    t_outtab      <span class="token operator">=</span> gt_table[]
+  <span class="token keyword">EXCEPTIONS</span>
+    program_error <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">OTHERS</span>        <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">.</span>
+<span class="token keyword">IF</span> sy<span class="token token-operator punctuation">-</span>subrc <span class="token operator">&lt;&gt;</span> <span class="token number">0</span><span class="token punctuation">.</span>
+<span class="token comment">* MESSAGE ID SY-MSGID TYPE SY-MSGTY NUMBER SY-MSGNO</span>
+<span class="token comment">*   WITH SY-MSGV1 SY-MSGV2 SY-MSGV3 SY-MSGV4.</span>
+<span class="token keyword">ENDIF</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>复制GUI状态</p>
+<p>事物代码<code> se41</code></p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090106885-1096731101.png" alt="image"></p>
+<p>事件  </p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap">slis_ev_item_data_expand   <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'ITEM_DATA_EXPAND'</span><span class="token punctuation">,</span>
+slis_ev_reprep_sel_modify  <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'REPREP_SEL_MODIFY'</span><span class="token punctuation">,</span>
+slis_ev_caller_exit_at_start <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'CALLER_EXIT'</span><span class="token punctuation">,</span>
+slis_ev_user_command       <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'USER_COMMAND'</span><span class="token punctuation">,</span>
+slis_ev_top_of_page        <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'TOP_OF_PAGE'</span><span class="token punctuation">,</span>
+slis_ev_data_changed       <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'DATA_CHANGED'</span><span class="token punctuation">,</span>
+slis_ev_top_of_coverpage   <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'TOP_OF_COVERPAGE'</span><span class="token punctuation">,</span>
+slis_ev_end_of_coverpage   <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'END_OF_COVERPAGE'</span><span class="token punctuation">,</span>
+slis_ev_foreign_top_of_page <span class="token keyword">type</span> slis_formname
+                                       <span class="token keyword">value</span> <span class="token string">'FOREIGN_TOP_OF_PAGE'</span><span class="token punctuation">,</span>
+slis_ev_foreign_end_of_page <span class="token keyword">type</span> slis_formname
+                                       <span class="token keyword">value</span> <span class="token string">'FOREIGN_END_OF_PAGE'</span><span class="token punctuation">,</span>
+slis_ev_pf_status_set      <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'PF_STATUS_SET'</span><span class="token punctuation">,</span>
+slis_ev_list_modify        <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'LIST_MODIFY'</span><span class="token punctuation">,</span>
+slis_ev_top_of_list        <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'TOP_OF_LIST'</span><span class="token punctuation">,</span>
+slis_ev_end_of_page        <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'END_OF_PAGE'</span><span class="token punctuation">,</span>
+slis_ev_end_of_list        <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'END_OF_LIST'</span><span class="token punctuation">,</span>
+slis_ev_after_line_output  <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'AFTER_LINE_OUTPUT'</span><span class="token punctuation">,</span>
+slis_ev_before_line_output <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span>
+                                                   <span class="token string">'BEFORE_LINE_OUTPUT'</span><span class="token punctuation">,</span>
+slis_ev_subtotal_text      <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'SUBTOTAL_TEXT'</span><span class="token punctuation">,</span>
+slis_ev_grouplevel_change  <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> <span class="token string">'GROUPLEVEL_CHANGE'</span><span class="token punctuation">,</span>
+slis_ev_context_menu       <span class="token keyword">type</span> slis_formname <span class="token keyword">value</span> 'CONTEXT_MENU<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="选择屏幕"><a href="#选择屏幕" class="headerlink" title="选择屏幕"></a>选择屏幕</h3><p><strong>parameter：</strong>单值输入</p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090122586-726176739.png" alt="image"></p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090130431-1832145280.png" alt="image"></p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">PARAMETERS</span> filed1<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span> <span class="token keyword">type</span> <span class="token keyword">c</span> <span class="token keyword">DEFAULT</span> <span class="token string">'aaaaa'</span> <span class="token keyword">OBLIGATORY</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>**SELECT-OPTIONS:**复杂选择<img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090141963-1320231146.png" alt="image"></p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090207829-696811454.png" alt="image"></p>
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090222425-792190152.png" alt="image"></p>
+<h2 id="复制GUI状态"><a href="#复制GUI状态" class="headerlink" title="复制GUI状态"></a>复制GUI状态</h2><p>se38查询程序<strong>SAPLKKBL</strong>。其附带的<strong>STANDARD_FULLSCREEN</strong>即标准GUI状态栏。</p>
+<h2 id="模块化编程"><a href="#模块化编程" class="headerlink" title="模块化编程"></a>模块化编程</h2><p>子例程三种参数传递</p>
+<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"><span class="token keyword">form</span> form_name <span class="token keyword">using</span> f1<span class="token punctuation">.</span>"引用传递  
+
+<span class="token keyword">endform</span><span class="token punctuation">.</span>
+<span class="token comment">*等同于</span>
+<span class="token keyword">form</span> form_name <span class="token keyword">changing</span> f1<span class="token punctuation">.</span>"引用传递  
+
+<span class="token keyword">endform</span><span class="token punctuation">.</span>
+
+<span class="token keyword">form</span> form_name <span class="token keyword">using</span> <span class="token keyword">value</span><span class="token punctuation">(</span>f1<span class="token punctuation">)</span><span class="token punctuation">.</span>"值传递
+
+<span class="token keyword">endform</span><span class="token punctuation">.</span>
+
+<span class="token keyword">form</span> form_name <span class="token keyword">changing</span> <span class="token keyword">value</span><span class="token punctuation">(</span>f1<span class="token punctuation">)</span><span class="token punctuation">.</span>"值传递带返回值
+
+<span class="token keyword">endform</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://img2020.cnblogs.com/blog/2210925/202111/2210925-20211130090249686-2100087984.png" alt="image"></p>
+<h3 id="权限对象表-tobj"><a href="#权限对象表-tobj" class="headerlink" title="权限对象表  tobj"></a>权限对象表  tobj</h3>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">fun-ny</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://fun-ny.cn/2021/12/07/abap-xue-xi-bi-ji/">https://fun-ny.cn/2021/12/07/abap-xue-xi-bi-ji/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">fun-ny</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/ABAP/">
+                                    <span class="chip bg-color">ABAP</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/12/07/abap-za-xiang/">
+                    <div class="card-image">
+                        
+                        <img src="https://imag.fun-ny.cn/infinity-2812431.png" class="responsive-img" alt="ABAP杂项">
+                        
+                        <span class="card-title">ABAP杂项</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            主要用来记录ABAP中的一些奇淫技巧
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ABAP/" class="post-category">
+                                    ABAP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ABAP/">
+                        <span class="chip bg-color">ABAP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/07/abap-xian-zhi-select-options/">
+                    <div class="card-image">
+                        
+                        <img src="https://imag.fun-ny.cn/infinity-895995.jpg" class="responsive-img" alt="ABAP限制SELECT-OPTIONS">
+                        
+                        <span class="card-title">ABAP限制SELECT-OPTIONS</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            限制ABAP选择屏幕上SELECT-OPTIONS的操作
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/ABAP/" class="post-category">
+                                    ABAP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/ABAP/">
+                        <span class="chip bg-color">ABAP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021</span>
+            
+            <span id="year">2021</span>
+            <a href="/about" target="_blank">fun-ny</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">114.3k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+            <span id="icp"><img src="/medias/icp.png" style="vertical-align: text-bottom;" />
+                <a href="https://beian.miit.gov.cn" target="_blank">豫ICP备2021035072号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/fanli1106" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:fanli918@outlook.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1778803286" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1778803286" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
