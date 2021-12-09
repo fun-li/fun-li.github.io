@@ -402,21 +402,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-07
+                    2021-12-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    17.9k
+                    16.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    69 分
+                    64 分
                 </div>
                 
 
@@ -439,45 +439,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第一章-数据库概述"><a href="#第一章-数据库概述" class="headerlink" title="第一章 数据库概述"></a>第一章 数据库概述</h1><h2 id="1-1-数据库概述"><a href="#1-1-数据库概述" class="headerlink" title="1.1 数据库概述"></a>1.1 数据库概述</h2><p>DBMS：数据库管理系统（Database Management System）是一种操纵和管理数据库的大型软件，例如建立、使用和维护数据库。</p>
-<p>DB：数据库（Database）</p>
-<p>SQL：结构化查询语言，（Structure Query Language），专门用来操作/访问数据库的通用语言。</p>
-<p> 如果把<code>数据库</code>比作<code>盘子</code>，那数据就是盘子里的<code>菜</code>，<code>SQL</code>则是你的<code>筷子</code>。<img src="http://imag.fun-ny.cn/img/05ed650bd2fdd06379a4cf9c39b19859.jpg"> </p>
-<p>数据库类型：数据库经过几十年的发展，出现了多种类型。目前最常见的数据库模型主要是：关系型数据库和（noSQL）非关系型数据库。</p>
-<p>MySQL：其中的一款关系型数据库管理系统</p>
-<p>以下是2020年<strong>DB-Engines Ranking</strong> 对各数据库受欢迎程度进行调查后的统计结果：（查看数据库最新排名:<a class="link" target="_blank" rel="noopener" href="https://db-engines.com/en/ranking%EF%BC%89">https://db-engines.com/en/ranking）<i class="fas fa-external-link-alt"></i></a></p>
-<p><img src="http://imag.fun-ny.cn/img/1600332819382.png" alt="1600332819382"></p>
-<p>关系型数据库模型是将复杂的数据结构用较为简单的二元关系（二维表）来表示，如图所示。在该类型数据库中，对数据的操作基本上都建立在一个或多个表格上，我们可以采用结构化查询语言（SQL）对数据库进行操作。关系型数据库是目前主流的数据库技术，其中具有代表性的数据库管理系统有：Oracle、DB2、SQL Server、MySQL等。</p>
-<p><img src="http://imag.fun-ny.cn/img/1600142064174.png" alt="1600142064174"></p>
-<p>非关系型数据库：</p>
-<p> 随着互联网<a class="link" target="_blank" rel="noopener" href="https://baike.baidu.com/item/web2.0/97695">web2.0<i class="fas fa-external-link-alt"></i></a>网站的兴起，传统的关系数据库在处理web2.0网站，特别是超大规模和高并发的<a class="link" target="_blank" rel="noopener" href="https://baike.baidu.com/item/SNS/10242">SNS<i class="fas fa-external-link-alt"></i></a>（ 社交网络服务 ）类型的web2.0纯<a class="link" target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%8A%A8%E6%80%81%E7%BD%91">动态网<i class="fas fa-external-link-alt"></i></a>站已经显得力不从心，出现了很多难以克服的问题，而非关系型的数据库则由于其本身的特点得到了非常迅速的发展。NoSQL数据库的产生就是为了解决大规模数据集合多重数据种类带来的挑战，尤其是大数据应用难题。 redis  MongoDB</p>
-<h3 id="关系型数据库设计规则"><a href="#关系型数据库设计规则" class="headerlink" title="关系型数据库设计规则"></a>关系型数据库设计规则</h3><ul>
-<li><p><strong>遵循ER模型</strong></p>
-<ul>
-<li>E    entity   代表实体的意思      对应到数据库当中的一张表          </li>
-<li>R    relationship 代表关系的意思  </li>
-</ul>
-</li>
-<li><p><strong>具体体现</strong></p>
-<ul>
-<li>将数据放到表中，表再放到库中。</li>
-<li>一个数据库中可以有多个表，每个表都有一个名字，用来标识自己。表名具有唯一性。</li>
-<li>表具有一些特性，这些特性定义了数据在表中如何存储，类似java和python中 “类”的设计。</li>
-<li>表由列组成，我们也称为<strong>字段</strong>。每个字段描述了它所含有的数据的意义，<strong>数据表的设计实际上就是对字段的设计</strong>。创建数据表时，为每个字段分配一个数据类型，定义它们的数据长度和字段名。每个字段类似java 或者python中的“实例属性”。</li>
-<li>表中的数据是按行存储的，一行即为一条记录。每一行类似于java或python中的“对象”。</li>
-</ul>
-<p><img src="http://imag.fun-ny.cn/img/1557377471553.png" alt="1557377471553"></p>
-</li>
-</ul>
-<h2 id="1-2-MySQL概述"><a href="#1-2-MySQL概述" class="headerlink" title="1.2  MySQL概述"></a>1.2  MySQL概述</h2><p>MySQL数据库最初是由瑞典MySQL AB公司开发，2008年1月16号被Sun公司收购。2009年，SUN又被Oracle收购。MySQL是目前IT行业最流行的开放源代码的数据库管理系统，同时它也是一个支持多线程高并发多用户的关系型数据库管理系统。MySQL之所以受到业界人士的青睐，主要是因为其具有以下几方面优点： </p>
-<h4 id="1-开放源代码"><a href="#1-开放源代码" class="headerlink" title="1. 开放源代码"></a>1. 开放源代码</h4><p>MySQL最强大的优势之一在于它是一个开放源代码的数据库管理系统。开源的特点是给予了用户根据自己需要修改DBMS的自由。MySQL采用了General Public License，这意味着授予用户阅读、修改和优化源代码的权利，这样即使是免费版的MySQL的功能也足够强大，这也是为什么MySQL越来越受欢迎的主要原因。 </p>
-<h4 id="2-跨平台"><a href="#2-跨平台" class="headerlink" title="2. 跨平台"></a>2. 跨平台</h4><p>MySQL可以在不同的操作系统下运行，简单地说，MySQL可以支持Windows系统、UNIX系统、Linux系统等多种操作系统平台。这意味着在一个操作系统中实现的应用程序可以很方便地移植到其他的操作系统下。 </p>
-<h4 id="3-轻量级"><a href="#3-轻量级" class="headerlink" title="3. 轻量级"></a>3. 轻量级</h4><p>MySQL的核心程序完全采用多线程编程，这些线程都是轻量级的进程，它在灵活地为用户提供服务的同时，又不会占用过多的系统资源。因此MySQL能够更快速、高效的处理数据。 </p>
-<h4 id="4-成本低"><a href="#4-成本低" class="headerlink" title="4. 成本低"></a>4. 成本低</h4><p>MySQL分为社区版和企业版，社区版是完全免费的，而企业版是收费的。即使在开发中需要用到一些付费的附加功能，价格相对于昂贵的Oracle、DB2等也是有很大优势的。其实免费的社区版也支持多种数据类型和正规的SQL查询语言，能够对数据进行各种查询、增加、删除、修改等操作，所以一般情况下社区版就可以满足开发需求了，而对数据库可靠性要求比较高的企业可以选择企业版。 </p>
-<p><img src="http://imag.fun-ny.cn/img/1600240781083.png" alt="1600240781083"></p>
-<p><img src="http://imag.fun-ny.cn/img/1557377559776.png" alt="imgs/1557377559776.png"></p>
-<h2 id="1-3-Mysql软件的卸载、安装和配置"><a href="#1-3-Mysql软件的卸载、安装和配置" class="headerlink" title="1.3 Mysql软件的卸载、安装和配置"></a>1.3 Mysql软件的卸载、安装和配置</h2><p>见《MySQL5.7安装文档.md》</p>
-<h1 id="第二章-MySQL的使用"><a href="#第二章-MySQL的使用" class="headerlink" title="第二章 MySQL的使用"></a>第二章 MySQL的使用</h1><h2 id="2-1-MySQL服务的启动"><a href="#2-1-MySQL服务的启动" class="headerlink" title="2.1 MySQL服务的启动"></a>2.1 MySQL服务的启动</h2><p>“我的电脑/计算机”–&gt;右键–&gt;“管理”–&gt;“服务”–&gt;启动和关闭MySQL服务</p>
+                <h1 id="1-MySQL的使用"><a href="#1-MySQL的使用" class="headerlink" title="1 MySQL的使用"></a>1 MySQL的使用</h1><h2 id="1-1-MySQL服务的启动"><a href="#1-1-MySQL服务的启动" class="headerlink" title="1.1 MySQL服务的启动"></a>1.1 MySQL服务的启动</h2><p>“我的电脑/计算机”–&gt;右键–&gt;“管理”–&gt;“服务”–&gt;启动和关闭MySQL服务</p>
 <p>“开始菜单”–&gt;“控制面板”–&gt;“管理工具”–&gt;“服务”–&gt;启动和关闭MySQL</p>
 <p>“任务管理器”–&gt;“服务”–&gt;启动和关闭MySQL</p>
 <p><img src="http://imag.fun-ny.cn/img/wps10.jpg" alt="img">    <img src="http://imag.fun-ny.cn/img/wps11.jpg" alt="img"></p>
@@ -486,7 +448,7 @@
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">net  start  MySQL服务名
 net  stop  MySQL服务名<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h2 id="2-2-客户端连接MySQL"><a href="#2-2-客户端连接MySQL" class="headerlink" title="2.2 客户端连接MySQL"></a>2.2 客户端连接MySQL</h2><p>1、命令行客户端：</p>
+<h2 id="1-2-客户端连接MySQL"><a href="#1-2-客户端连接MySQL" class="headerlink" title="1.2 客户端连接MySQL"></a>1.2 客户端连接MySQL</h2><p>1、命令行客户端：</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">mysql -h 主机IP地址 -P 端口号	-u 用户名	-p回车
 Enter Password:密码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
@@ -498,7 +460,7 @@ Enter Password:密码<span aria-hidden="true" class="line-numbers-rows"><span></
 </blockquote>
 <p>2、其他客户端，例如：可视化工具Navicat或SQLyog等</p>
 <p><img src="http://imag.fun-ny.cn/img/1557378069584.png" alt="1557378069584"></p>
-<h1 id="第三章-MySQL数据类型和运算符"><a href="#第三章-MySQL数据类型和运算符" class="headerlink" title="第三章  MySQL数据类型和运算符"></a>第三章  MySQL数据类型和运算符</h1><h2 id="3-1-MySQL数据类型"><a href="#3-1-MySQL数据类型" class="headerlink" title="3.1 MySQL数据类型"></a>3.1 MySQL数据类型</h2><h3 id="1、数值类型"><a href="#1、数值类型" class="headerlink" title="1、数值类型"></a>1、数值类型</h3><ul>
+<h1 id="2-MySQL数据类型和运算符"><a href="#2-MySQL数据类型和运算符" class="headerlink" title="2  MySQL数据类型和运算符"></a>2  MySQL数据类型和运算符</h1><h2 id="2-1-MySQL数据类型"><a href="#2-1-MySQL数据类型" class="headerlink" title="2.1 MySQL数据类型"></a>2.1 MySQL数据类型</h2><h3 id="1、数值类型"><a href="#1、数值类型" class="headerlink" title="1、数值类型"></a>1、数值类型</h3><ul>
 <li>整型系列：xxxInt3</li>
 </ul>
 <blockquote>
@@ -584,9 +546,7 @@ Enter Password:密码<span aria-hidden="true" class="line-numbers-rows"><span></
 
 
 
-
-
-<h1 id="第四章-SQL"><a href="#第四章-SQL" class="headerlink" title="第四章 SQL"></a>第四章 SQL</h1><h2 id="4-1-MySQL的语法规范和要求"><a href="#4-1-MySQL的语法规范和要求" class="headerlink" title="4.1 MySQL的语法规范和要求"></a>4.1 MySQL的语法规范和要求</h2><p>（1）mysql的sql语法不区分大小写</p>
+<h1 id="3-SQL"><a href="#3-SQL" class="headerlink" title="3 SQL"></a>3 SQL</h1><h2 id="3-1-MySQL的语法规范和要求"><a href="#3-1-MySQL的语法规范和要求" class="headerlink" title="3.1 MySQL的语法规范和要求"></a>3.1 MySQL的语法规范和要求</h2><p>（1）mysql的sql语法不区分大小写</p>
 <blockquote>
 <p>MySQL的关键字和函数名等不区分大小写，但是对于数据值是否区分大小写，和字符集与校对规则有关。</p>
 </blockquote>
@@ -627,11 +587,17 @@ select id as "编号", `name` as "姓名" from t_stu; #起别名时，as都可�
 select id as 编号, `name` as 姓名 from t_stu; #如果字段别名中没有空格，那么可以省略""
 select id as 编 号, `name` as 姓 名 from t_stu; #错误，如果字段别名中有空格，那么不能省略""<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4-2-SQL分类"><a href="#4-2-SQL分类" class="headerlink" title="4.2 SQL分类"></a>4.2 SQL分类</h2><p>DDL (Data Definition Language) ：数据定义语言，定义库，表结构等，包括create,drop,alter等</p>
-<p>DML (Data Manipulation Language) ：数据操作语言，增删改查数据，包括insert,delete,update,select等</p>
-<p>DQL(Data query Language):数据查询语言 select</p>
-<p>DCL（Data Control Language） ：数据控制语言，权限，事务等管理。</p>
-<h2 id="4-3-DDL-v1-0"><a href="#4-3-DDL-v1-0" class="headerlink" title="4.3 DDL(v1.0)"></a>4.3 DDL(v1.0)</h2><p>1、查看所有数据库</p>
+<h2 id="3-2-SQL分类"><a href="#3-2-SQL分类" class="headerlink" title="3.2 SQL分类"></a>3.2 SQL分类</h2><ul>
+<li><p>DDL (Data Definition Language) ：数据定义语言，定义库，表结构等，包括create,drop,alter等</p>
+</li>
+<li><p>DML (Data Manipulation Language) ：数据操作语言，增删改查数据，包括insert,delete,update,select等</p>
+</li>
+<li><p>DQL(Data query Language):数据查询语言 select</p>
+</li>
+<li><p>DCL（Data Control Language） ：数据控制语言，权限，事务等管理。</p>
+</li>
+</ul>
+<h2 id="3-3-DDL-v1-0"><a href="#3-3-DDL-v1-0" class="headerlink" title="3.3 DDL(v1.0)"></a>3.3 DDL(v1.0)</h2><p>1、查看所有数据库</p>
 <pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>2、指定使用某个数据库</p>
@@ -692,7 +658,7 @@ rename table 旧表名 to 新表名;<span aria-hidden="true" class="line-numbers
 
 
 
-<h2 id="4-4-DML-v1-0"><a href="#4-4-DML-v1-0" class="headerlink" title="4.4 DML(v1.0)"></a>4.4 DML(v1.0)</h2><p>1、添加数据</p>
+<h2 id="3-4-DML-v1-0"><a href="#3-4-DML-v1-0" class="headerlink" title="3.4 DML(v1.0)"></a>3.4 DML(v1.0)</h2><p>1、添加数据</p>
 <pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into 【数据库名.]表名称 values(值列表)； 
 #要求值列表的顺序、个数、类型，要与表格中的字段的顺序、个数、类型一一匹配
 
@@ -736,7 +702,7 @@ select 字段列表  from 【数据库名.]表名称 【where 条件】;<span ar
 <blockquote>
 <p>使用distinct可以对查询结果进行去重</p>
 </blockquote>
-<h2 id="4-5-导入和导出数据"><a href="#4-5-导入和导出数据" class="headerlink" title="4.5 导入和导出数据"></a>4.5 导入和导出数据</h2><h3 id="4-5-1-单个数据库备份"><a href="#4-5-1-单个数据库备份" class="headerlink" title="4.5.1 单个数据库备份"></a>4.5.1 单个数据库备份</h3><p>mysql5.5</p>
+<h2 id="3-5-导入和导出数据"><a href="#3-5-导入和导出数据" class="headerlink" title="3.5 导入和导出数据"></a>3.5 导入和导出数据</h2><h3 id="3-5-1-单个数据库备份"><a href="#3-5-1-单个数据库备份" class="headerlink" title="3.5.1 单个数据库备份"></a>3.5.1 单个数据库备份</h3><p>mysql5.5</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">C:\Windows\System32<span class="token operator">&gt;</span> mysqldump <span class="token operator">-</span>h主机地址 <span class="token operator">-</span>P端口号 <span class="token operator">-</span>u用户名 <span class="token operator">-</span>p密码 <span class="token comment">--database  数据名 &gt; 文件路径/文件名.sql</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>例如：</p>
@@ -753,14 +719,14 @@ Enter password: ****<span aria-hidden="true" class="line-numbers-rows"><span></s
 <blockquote>
 <p>不要再写–database</p>
 </blockquote>
-<h3 id="4-5-2-导入执行备份的sql脚本"><a href="#4-5-2-导入执行备份的sql脚本" class="headerlink" title="4.5.2 导入执行备份的sql脚本"></a>4.5.2 导入执行备份的sql脚本</h3><p>先登录mysql，然后执行如下命令：</p>
+<h3 id="3-5-2-导入执行备份的sql脚本"><a href="#3-5-2-导入执行备份的sql脚本" class="headerlink" title="3.5.2 导入执行备份的sql脚本"></a>3.5.2 导入执行备份的sql脚本</h3><p>先登录mysql，然后执行如下命令：</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">&gt;</span> source  <span class="token keyword">sql</span>脚本路径名<span class="token punctuation">.</span><span class="token keyword">sql</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>例如：</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">&gt;</span>source d:<span class="token operator">/</span>test<span class="token punctuation">.</span><span class="token keyword">sql</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="http://imag.fun-ny.cn/img/1560928671347.png" alt="1560928671347"></p>
-<h2 id="4-6-MySQL运算符"><a href="#4-6-MySQL运算符" class="headerlink" title="4.6 MySQL运算符"></a>4.6 MySQL运算符</h2><p>1、算术运算符</p>
+<h2 id="3-6-MySQL运算符"><a href="#3-6-MySQL运算符" class="headerlink" title="3.6 MySQL运算符"></a>3.6 MySQL运算符</h2><p>1、算术运算符</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">加：<span class="token operator">+</span>
 减：<span class="token operator">-</span>
 乘：<span class="token operator">*</span>
@@ -903,7 +869,7 @@ like '%x%' x代表确定的字符 %表示不确定的0~n个字符
 
 
 
-<h1 id="第五章-约束与索引"><a href="#第五章-约束与索引" class="headerlink" title="第五章  约束与索引"></a>第五章  约束与索引</h1><h2 id="5-1-约束与索引的概念"><a href="#5-1-约束与索引的概念" class="headerlink" title="5.1 约束与索引的概念"></a>5.1 约束与索引的概念</h2><p>约束是用来对数据业务规则和数据完整性进行实施、维护。约束的作用范围仅限在当前数据库，约束可以被当做<strong>数据库对象</strong>来处理，它们具有名称和关联模式，是逻辑约束，不会因为设置约束而额外占用空间。</p>
+<h1 id="4-约束与索引"><a href="#4-约束与索引" class="headerlink" title="4  约束与索引"></a>4  约束与索引</h1><h2 id="4-1-约束与索引的概念"><a href="#4-1-约束与索引的概念" class="headerlink" title="4.1 约束与索引的概念"></a>4.1 约束与索引的概念</h2><p>约束是用来对数据业务规则和数据完整性进行实施、维护。约束的作用范围仅限在当前数据库，约束可以被当做<strong>数据库对象</strong>来处理，它们具有名称和关联模式，是逻辑约束，不会因为设置约束而额外占用空间。</p>
 <p>1、数据完整性（Data Integrity）是指数据的精确性（Accuracy）和可靠性（Reliability）。它是应防止数据库中存在不符合语义规定的数据和防止因错误信息的输入输出造成无效操作或错误信息而提出的。</p>
 <p>数据的完整性要从以下四个方面考虑：</p>
 <ul>
@@ -929,7 +895,7 @@ like '%x%' x代表确定的字符 %表示不确定的0~n个字符
 <p>删除唯一键的方式是通过删除对应的索引来实现的</p>
 <p>删除外键，外键列上的索引还在，如果需要删除，需要单独删除索引</p>
 </blockquote>
-<h2 id="5-2-DDL-v2-0"><a href="#5-2-DDL-v2-0" class="headerlink" title="5.2  DDL(v2.0)"></a>5.2  DDL(v2.0)</h2><h3 id="1、查看某个表的约束"><a href="#1、查看某个表的约束" class="headerlink" title="1、查看某个表的约束"></a>1、查看某个表的约束</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT * FROM information_schema.table_constraints WHERE table_name = '表名称';
+<h2 id="4-2-DDL-v2-0"><a href="#4-2-DDL-v2-0" class="headerlink" title="4.2  DDL(v2.0)"></a>4.2  DDL(v2.0)</h2><h3 id="1、查看某个表的约束"><a href="#1、查看某个表的约束" class="headerlink" title="1、查看某个表的约束"></a>1、查看某个表的约束</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT * FROM information_schema.table_constraints WHERE table_name = '表名称';
 或
 SHOW CREATE TABLE 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
@@ -1180,9 +1146,7 @@ create table 【数据名.】表名(
 #删除外键约束不会删除对应的索引，如果需要删除索引，需要用ALTER TABLE 表名称 DROP INDEX 索引名;
 #查看索引名 show index from 表名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-<h2 id="5-3-DML-v2-0"><a href="#5-3-DML-v2-0" class="headerlink" title="5.3 DML(v2.0)"></a>5.3 DML(v2.0)</h2><p>1、如果某列有自增约束，怎么添加该字段的值</p>
+<h2 id="4-3-DML-v2-0"><a href="#4-3-DML-v2-0" class="headerlink" title="4.3 DML(v2.0)"></a>4.3 DML(v2.0)</h2><p>1、如果某列有自增约束，怎么添加该字段的值</p>
 <p>添加数据时，对于自增列</p>
 <pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into 【数据库名.]表名称 values(值列表)；#在值列表中，对应自增列可以赋值为null和0
 
@@ -1197,14 +1161,14 @@ insert into 【数据库名.]表名称(部分字段列表) values(值列表)；#
 <p>修改数据</p>
 <pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">update 【数据库名.]表名称 set 字段名1 = 值1, 字段名2 = 值2 。。。 【where 条件】; #对应默认值列，如果想用默认值，写字段名 = default就可以<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h1 id="第六章-函数"><a href="#第六章-函数" class="headerlink" title="第六章 函数"></a>第六章 函数</h1><p><strong>两种SQL函数</strong></p>
+<h1 id="5-函数"><a href="#5-函数" class="headerlink" title="5 函数"></a>5 函数</h1><p><strong>两种SQL函数</strong></p>
 <p><img src="http://imag.fun-ny.cn/img/1557457787630.png" alt="1557457787630"></p>
-<h2 id="6-1单行函数"><a href="#6-1单行函数" class="headerlink" title="6.1单行函数"></a><strong>6.1单行函数</strong></h2><ul>
+<h2 id="5-1单行函数"><a href="#5-1单行函数" class="headerlink" title="5.1单行函数"></a>5.1单行函数</h2><ul>
 <li><strong>只对一行进行变换，每行返回一个结果</strong></li>
 <li>可以嵌套</li>
 <li>参数可以是一字段或一个表达式或一个值</li>
 </ul>
-<h3 id="6-1-1-字符串函数"><a href="#6-1-1-字符串函数" class="headerlink" title="6.1.1 字符串函数"></a>6.1.1 字符串函数</h3><table>
+<h3 id="5-1-1-字符串函数"><a href="#5-1-1-字符串函数" class="headerlink" title="5.1.1 字符串函数"></a>5.1.1 字符串函数</h3><table>
 <thead>
 <tr>
 <th>函数</th>
@@ -1361,7 +1325,7 @@ insert into 【数据库名.]表名称(部分字段列表) values(值列表)；#
 <td><strong>amcd</strong></td>
 </tr>
 </tbody></table>
-<h3 id="6-1-2-数值函数-数学函数"><a href="#6-1-2-数值函数-数学函数" class="headerlink" title="6.1.2 数值函数/数学函数"></a>6.1.2 数值函数/数学函数</h3><table>
+<h3 id="5-1-2-数值函数-数学函数"><a href="#5-1-2-数值函数-数学函数" class="headerlink" title="5.1.2 数值函数/数学函数"></a>5.1.2 数值函数/数学函数</h3><table>
 <thead>
 <tr>
 <th>函数</th>
@@ -1422,7 +1386,7 @@ insert into 【数据库名.]表名称(部分字段列表) values(值列表)；#
 
 
 
-<h3 id="6-1-3-日期函数"><a href="#6-1-3-日期函数" class="headerlink" title="6.1.3 日期函数"></a>6.1.3 日期函数</h3><table>
+<h3 id="5-1-3-日期函数"><a href="#5-1-3-日期函数" class="headerlink" title="5.1.3 日期函数"></a>5.1.3 日期函数</h3><table>
 <thead>
 <tr>
 <th>函数</th>
@@ -1630,7 +1594,7 @@ insert into 【数据库名.]表名称(部分字段列表) values(值列表)；#
 
 
 
-<h3 id="6-1-4-流程函数"><a href="#6-1-4-流程函数" class="headerlink" title="6.1.4 流程函数"></a>6.1.4 流程函数</h3><table>
+<h3 id="5-1-4-流程函数"><a href="#5-1-4-流程函数" class="headerlink" title="5.1.4 流程函数"></a>5.1.4 流程函数</h3><table>
 <thead>
 <tr>
 <th>函数</th>
@@ -1679,7 +1643,7 @@ insert into 【数据库名.]表名称(部分字段列表) values(值列表)；#
 				  ELSE '草根' END  "描述"
 FROM employees; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="6-1-5-其他函数"><a href="#6-1-5-其他函数" class="headerlink" title="6.1.5 其他函数"></a>6.1.5 其他函数</h3><table>
+<h3 id="5-1-5-其他函数"><a href="#5-1-5-其他函数" class="headerlink" title="5.1.5 其他函数"></a>5.1.5 其他函数</h3><table>
 <thead>
 <tr>
 <th>函数</th>
@@ -1707,7 +1671,7 @@ FROM employees; <span aria-hidden="true" class="line-numbers-rows"><span></span>
 <td>返回字符串str的md5值，也是一种加密方式</td>
 </tr>
 </tbody></table>
-<h2 id="6-2多行（分组）函数"><a href="#6-2多行（分组）函数" class="headerlink" title="6.2多行（分组）函数"></a>6.2多行（分组）函数</h2><ul>
+<h2 id="5-2多行（分组）函数"><a href="#5-2多行（分组）函数" class="headerlink" title="5.2多行（分组）函数"></a>5.2多行（分组）函数</h2><ul>
 <li><strong>什么是分组函数</strong></li>
 </ul>
 <p>对一组数据进行运算，针对一组数据（多行记录）只返回一个结果，也称分组函数。</p>
@@ -1748,7 +1712,7 @@ FROM employees; <span aria-hidden="true" class="line-numbers-rows"><span></span>
 <p>Innodb引擎的表用count(*)直接读行数，效率很低，因为innodb真的要去数一遍。</p>
 </li>
 </ul>
-<h1 id="第七章-关联查询（联合查询-多表联查）"><a href="#第七章-关联查询（联合查询-多表联查）" class="headerlink" title="第七章 关联查询（联合查询,多表联查）"></a>第七章 关联查询（联合查询,多表联查）</h1><h2 id="7-1-关联查询的七种结果"><a href="#7-1-关联查询的七种结果" class="headerlink" title="7.1 关联查询的七种结果"></a>7.1 关联查询的七种结果</h2><p><img src="http://imag.fun-ny.cn/img/1557194340352.png" alt="1557194340352"></p>
+<h1 id="6-关联查询（联合查询-多表联查）"><a href="#6-关联查询（联合查询-多表联查）" class="headerlink" title="6 关联查询（联合查询,多表联查）"></a>6 关联查询（联合查询,多表联查）</h1><h2 id="6-1-关联查询的七种结果"><a href="#6-1-关联查询的七种结果" class="headerlink" title="6.1 关联查询的七种结果"></a>6.1 关联查询的七种结果</h2><p><img src="http://imag.fun-ny.cn/img/1557194340352.png" alt="1557194340352"></p>
 <p>（1）A∩B</p>
 <p>（2）A</p>
 <p>（3）A -  A∩B</p>
@@ -1756,7 +1720,7 @@ FROM employees; <span aria-hidden="true" class="line-numbers-rows"><span></span>
 <p>（5）B - A∩B</p>
 <p>（6）A ∪ B</p>
 <p>（7）A∪B- A∩B    或者   (A -  A∩B) ∪ （B - A∩B）</p>
-<h2 id="7-2-如何实现？"><a href="#7-2-如何实现？" class="headerlink" title="7.2 如何实现？"></a>7.2 如何实现？</h2><p>（1）内连接</p>
+<h2 id="6-2-如何实现？"><a href="#6-2-如何实现？" class="headerlink" title="6.2 如何实现？"></a>6.2 如何实现？</h2><p>（1）内连接</p>
 <p>（2）外连接：左外连接、右外连接、全外连接（mysql使用union代替全外连接）</p>
 <h3 id="1、内连接：实现A∩B"><a href="#1、内连接：实现A∩B" class="headerlink" title="1、内连接：实现A∩B"></a>1、内连接：实现A∩B</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 字段列表
 from A表 inner join B表
@@ -1905,7 +1869,7 @@ WHERE t_employee.did IS NULL
 
 
 
-<h2 id="7-3-特殊的关联查询：自连接"><a href="#7-3-特殊的关联查询：自连接" class="headerlink" title="7.3 特殊的关联查询：自连接"></a>7.3 特殊的关联查询：自连接</h2><p>两个关联查询的表是同一张表，通过取别名的方式来虚拟成两张表</p>
+<h2 id="6-3-特殊的关联查询：自连接"><a href="#6-3-特殊的关联查询：自连接" class="headerlink" title="6.3 特殊的关联查询：自连接"></a>6.3 特殊的关联查询：自连接</h2><p>两个关联查询的表是同一张表，通过取别名的方式来虚拟成两张表</p>
 <pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 字段列表
 from 表名 别名1 inner/left/right join 表名 别名2
 on 别名1.关联字段 = 别名2的关联字段
@@ -1928,7 +1892,7 @@ ON emp.mid = mgr.eid
 
 
 
-<h1 id="第八章-select语句的7大子句"><a href="#第八章-select语句的7大子句" class="headerlink" title="第八章 select语句的7大子句"></a>第八章 select语句的7大子句</h1><h2 id="8-1-7大子句书写顺序"><a href="#8-1-7大子句书写顺序" class="headerlink" title="8.1 7大子句书写顺序"></a>8.1 7大子句书写顺序</h2><p>（1）from：从哪些表中筛选</p>
+<h1 id="7-select语句的7大子句"><a href="#7-select语句的7大子句" class="headerlink" title="7 select语句的7大子句"></a>7 select语句的7大子句</h1><h2 id="7-1-7大子句书写顺序"><a href="#7-1-7大子句书写顺序" class="headerlink" title="7.1 7大子句书写顺序"></a>7.1 7大子句书写顺序</h2><p>（1）from：从哪些表中筛选</p>
 <p>（2）on：关联多表查询时，去除笛卡尔积</p>
 <p>（3）where：从表中筛选的条件</p>
 <p>（4）group by：分组依据</p>
@@ -1946,7 +1910,7 @@ HAVING COUNT(*)&gt;5
 ORDER BY 人数 DESC
 LIMIT 10,10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="8-2-group-by与分组函数"><a href="#8-2-group-by与分组函数" class="headerlink" title="8.2 group by与分组函数"></a>8.2 group by与分组函数</h2><p><img src="http://imag.fun-ny.cn/img/1557457869608.png" alt="1557457869608"></p>
+<h2 id="7-2-group-by与分组函数"><a href="#7-2-group-by与分组函数" class="headerlink" title="7.2 group by与分组函数"></a>7.2 group by与分组函数</h2><p><img src="http://imag.fun-ny.cn/img/1557457869608.png" alt="1557457869608"></p>
 <p><strong>可以使用GROUP BY子句将表中的数据分成若干组</strong></p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">column</span><span class="token punctuation">,</span> group_function<span class="token punctuation">(</span><span class="token keyword">column</span><span class="token punctuation">)</span>
 <span class="token keyword">FROM</span> <span class="token keyword">table</span>
@@ -1972,7 +1936,7 @@ LIMIT 10,10<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <span class="token keyword">FROM</span>     employees
 <span class="token keyword">GROUP</span> <span class="token keyword">BY</span> department_id<span class="token punctuation">,</span> job_id <span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="8-3-having与分组函数"><a href="#8-3-having与分组函数" class="headerlink" title="8.3 having与分组函数"></a>8.3 having与分组函数</h2><p><img src="http://imag.fun-ny.cn/img/1557457922443.png" alt="1557457922443"></p>
+<h2 id="7-3-having与分组函数"><a href="#7-3-having与分组函数" class="headerlink" title="7.3 having与分组函数"></a>7.3 having与分组函数</h2><p><img src="http://imag.fun-ny.cn/img/1557457922443.png" alt="1557457922443"></p>
 <ul>
 <li>统计各个部门的平均工资(只显示平均工资2000以上的)</li>
 </ul>
@@ -2031,10 +1995,10 @@ WHERE gender ='女' AND salary&gt;10000
 GROUP BY did
 HAVING COUNT(*) &gt; 1;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="8-4-order-by"><a href="#8-4-order-by" class="headerlink" title="8.4 order by"></a>8.4 order by</h2><p>order by：</p>
+<h2 id="7-4-order-by"><a href="#7-4-order-by" class="headerlink" title="7.4 order by"></a>7.4 order by</h2><p>order by：</p>
 <p>降序：desc</p>
 <p>升序：要么默认，要么加asc</p>
-<h2 id="8-5-limit"><a href="#8-5-limit" class="headerlink" title="8.5 limit"></a>8.5 limit</h2><p>limit：</p>
+<h2 id="7-5-limit"><a href="#7-5-limit" class="headerlink" title="7.5 limit"></a>7.5 limit</h2><p>limit：</p>
 <p>limit m,n </p>
 <p>m = （第几页 - 1）*每页的数量</p>
 <p>n = 每页的数量</p>
@@ -2065,7 +2029,7 @@ select * from emp limit 4,2;<span aria-hidden="true" class="line-numbers-rows"><
 
 
 
-<h1 id="第九章-子查询"><a href="#第九章-子查询" class="headerlink" title="第九章 子查询"></a>第九章 子查询</h1><p>嵌套在另一个查询中的查询，根据位置不同，分为：where型，from型，exists型。注意：不管子查询在哪里，子查询必须使用()括起来。</p>
+<h1 id="8-子查询"><a href="#8-子查询" class="headerlink" title="8 子查询"></a>8 子查询</h1><p>嵌套在另一个查询中的查询，根据位置不同，分为：where型，from型，exists型。注意：不管子查询在哪里，子查询必须使用()括起来。</p>
 <h2 id="1、where型"><a href="#1、where型" class="headerlink" title="1、where型"></a>1、where型</h2><p>①子查询是单值结果，那么可以对其使用（=，&gt;等比较运算符）</p>
 <p>②子查询是多值结果，那么可对其使用（【not】in(子查询结果)，或 &gt;all(子查询结果)，或&gt;=all(子查询结果)，&lt;all(子查询结果)，&lt;=all（子查询结果)，或 &gt;any(子查询结果)，或&gt;=any(子查询结果)，&lt;any(子查询结果)，&lt;=any（子查询结果)）</p>
 <pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">查询全公司最高工资的员工信息
@@ -2089,7 +2053,7 @@ where exists (select * from 员工表  where 部门表.部门编号 = 员工表.
 
 
 
-<h1 id="第十章-事务"><a href="#第十章-事务" class="headerlink" title="第十章  事务"></a>第十章  事务</h1><h2 id="10-1-事务概述"><a href="#10-1-事务概述" class="headerlink" title="10.1 事务概述"></a>10.1 事务概述</h2><p><strong>1、事务处理</strong>（事务操作）：<strong>保证所有事务都作为一个工作单元来执行，即使出现了故障，都不能改变这种执行方式。当在一个事务中执行多个操作时，要么所有的事务都被提交(commit)，那么这些修改就永久地保存下来；要么数据库管理系统将放弃所作的所有修改，整个事务回滚(rollback)到最初状态。</strong></p>
+<h1 id="9-事务"><a href="#9-事务" class="headerlink" title="9  事务"></a>9  事务</h1><h2 id="9-1-事务概述"><a href="#9-1-事务概述" class="headerlink" title="9.1 事务概述"></a>9.1 事务概述</h2><p><strong>1、事务处理</strong>（事务操作）：<strong>保证所有事务都作为一个工作单元来执行，即使出现了故障，都不能改变这种执行方式。当在一个事务中执行多个操作时，要么所有的事务都被提交(commit)，那么这些修改就永久地保存下来；要么数据库管理系统将放弃所作的所有修改，整个事务回滚(rollback)到最初状态。</strong></p>
 <pre><code> 例如转账操作：A账户要转账给B账户，那么A账户上减少的钱数和B账户上增加的钱数必须一致，也就是说A账户的转出操作和B账户的转入操作要么全部执行，要么全不执行；如果其中一个操作出现异常而没有执行的话，就会导致账户A和账户B的转入转出金额不一致的情况，为而事实上这种情况是不允许发生的，所以为了防止这种情况的发生，需要使用事务处理。
 </code></pre>
 <p>2、事务的ACID属性：</p>
@@ -2098,7 +2062,7 @@ where exists (select * from 员工表  where 部门表.部门编号 = 员工表.
 <p>（3）<strong>隔离性（Isolation）</strong><br>事务的隔离性是指一个事务的执行不能被其他事务干扰，即一个事务内部的操作及使用的数据对并发的其他事务是隔离的，并发执行的各个事务之间不能互相干扰。</p>
 <p>（4）<strong>持久性（Durability）</strong><br>持久性是指一个事务一旦被提交，它对数据库中数据的改变就是永久性的，接下来的其他操作和数据库故障不应该对其有任何影响。</p>
 <p><img src="http://imag.fun-ny.cn/img/1599461002700.png" alt="1599461002700"></p>
-<h2 id="10-2-开启和结束事务"><a href="#10-2-开启和结束事务" class="headerlink" title="10.2 开启和结束事务"></a>10.2 开启和结束事务</h2><p>1、mysql默认是自动提交，执行一句就提交一句。</p>
+<h2 id="9-2-开启和结束事务"><a href="#9-2-开启和结束事务" class="headerlink" title="9.2 开启和结束事务"></a>9.2 开启和结束事务</h2><p>1、mysql默认是自动提交，执行一句就提交一句。</p>
 <p>即默认情况下，每一条sql都是一个独立的sql。</p>
 <p>2、我想要手动提交事务：</p>
 <p>（1）set autocommit=false; </p>
@@ -2108,7 +2072,7 @@ where exists (select * from 员工表  where 部门表.部门编号 = 员工表.
 <p>commit; 或 rollback; 此次事务结束 想要事务保证数据安全需要再次进行开启</p>
 <p>3、注意：</p>
 <p>事务的回滚只对DML语句有效，对于DDL语句无效。</p>
-<h2 id="10-3-事务隔离级别"><a href="#10-3-事务隔离级别" class="headerlink" title="10.3 事务隔离级别"></a>10.3 事务隔离级别</h2><h3 id="1、事务并发问题"><a href="#1、事务并发问题" class="headerlink" title="1、事务并发问题"></a>1、事务并发问题</h3><p>对于同时运行的多个事务, 当这些事务访问数据库中相同的数据时, 如果没有采取必要的隔离机制, 就会导致各种并发问题:</p>
+<h2 id="9-3-事务隔离级别"><a href="#9-3-事务隔离级别" class="headerlink" title="9.3 事务隔离级别"></a>9.3 事务隔离级别</h2><h3 id="1、事务并发问题"><a href="#1、事务并发问题" class="headerlink" title="1、事务并发问题"></a>1、事务并发问题</h3><p>对于同时运行的多个事务, 当这些事务访问数据库中相同的数据时, 如果没有采取必要的隔离机制, 就会导致各种并发问题:</p>
 <ul>
 <li><strong>脏读</strong>: 对于两个事务 T1, T2, T1 读取了已经被 T2 更新但还<strong>没有被提交</strong>的字段。 之后, 若 T2 回滚, T1读取的内容就是临时且无效的。</li>
 </ul>
@@ -2180,7 +2144,7 @@ where exists (select * from 员工表  where 部门表.部门编号 = 员工表.
 <blockquote>
 <p>注意：这里的隔离级别中间是减号，不是下划线。</p>
 </blockquote>
-<h1 id="第十一章-用户与权限"><a href="#第十一章-用户与权限" class="headerlink" title="第十一章  用户与权限"></a>第十一章  用户与权限</h1><h2 id="11-1-身份认证"><a href="#11-1-身份认证" class="headerlink" title="11.1 身份认证"></a>11.1 身份认证</h2><p>（1）IP+用户名作为身份验证</p>
+<h1 id="10-用户与权限"><a href="#10-用户与权限" class="headerlink" title="10  用户与权限"></a>10  用户与权限</h1><h2 id="10-1-身份认证"><a href="#10-1-身份认证" class="headerlink" title="10.1 身份认证"></a>10.1 身份认证</h2><p>（1）IP+用户名作为身份验证</p>
 <pre><code>例如：
 
     root@localhost：只允许在本机使用root用户登录
@@ -2193,12 +2157,12 @@ where exists (select * from 员工表  where 部门表.部门编号 = 员工表.
 </code></pre>
 <blockquote>
 <p>建立用户时，用于身份验证的IP地址，是连接你的服务的客户端的IP地址</p>
-<p>例如：<a class="link" href="mailto:root@192.168.11.56">root@192.168.11.56<i class="fas fa-external-link-alt"></i></a>，表示客户端在192.168.11.56的机器上可以访问你的mysql服务</p>
+<p>例如：<a href="mailto:root@192.168.11.56">root@192.168.11.56</a>，表示客户端在192.168.11.56的机器上可以访问你的mysql服务</p>
 <p>而这个客户端，要连接你的服务时，-h后面的主机的IP地址是，服务器所在的机器的IP地址。</p>
-<p>例如：mysql服务在192.168.11.11机器上，客户端在192.168.11.56上，那么客户端可以用<a class="link" href="mailto:root@192.168.11.56">root@192.168.11.56<i class="fas fa-external-link-alt"></i></a>或root@%，连接时填写mysql -h192.168.11.11 -u root -p密码</p>
+<p>例如：mysql服务在192.168.11.11机器上，客户端在192.168.11.56上，那么客户端可以用<a href="mailto:root@192.168.11.56">root@192.168.11.56</a>或root@%，连接时填写mysql -h192.168.11.11 -u root -p密码</p>
 </blockquote>
 <p>（2）密码</p>
-<h2 id="11-2-分配权限"><a href="#11-2-分配权限" class="headerlink" title="11.2 分配权限"></a>11.2 分配权限</h2><h3 id="1、用户权限有4个权限级别"><a href="#1、用户权限有4个权限级别" class="headerlink" title="1、用户权限有4个权限级别"></a>1、用户权限有4个权限级别</h3><p>（1）全局</p>
+<h2 id="10-2-分配权限"><a href="#10-2-分配权限" class="headerlink" title="10.2 分配权限"></a>10.2 分配权限</h2><h3 id="1、用户权限有4个权限级别"><a href="#1、用户权限有4个权限级别" class="headerlink" title="1、用户权限有4个权限级别"></a>1、用户权限有4个权限级别</h3><p>（1）全局</p>
 <p>（2）数据库</p>
 <p>（3）表</p>
 <p>（4）字段</p>
@@ -2245,7 +2209,7 @@ revoke 权限列表 ON 表名.* from '用户名'@'主机IP地址';<span aria-hid
 
 
 
-<h1 id="第十二章-数据库设计的三大范式（附加）"><a href="#第十二章-数据库设计的三大范式（附加）" class="headerlink" title="第十二章  数据库设计的三大范式（附加）"></a>第十二章  数据库设计的三大范式（附加）</h1><h2 id="1-范式"><a href="#1-范式" class="headerlink" title="1) 范式"></a><strong>1)</strong> 范式</h2><p>• 必须保证数据库设计的合理性</p>
+<h1 id="11-数据库设计的三大范式（附加）"><a href="#11-数据库设计的三大范式（附加）" class="headerlink" title="11  数据库设计的三大范式（附加）"></a>11  数据库设计的三大范式（附加）</h1><h2 id="1-范式"><a href="#1-范式" class="headerlink" title="1) 范式"></a><strong>1)</strong> 范式</h2><p>• 必须保证数据库设计的合理性</p>
 <pre><code>       数据库设计关系整个系统的架构，关系到后续开发效率和运行效率
 
        数据库的设计主要包含了设计表结构和表之间的联系
@@ -2656,7 +2620,7 @@ revoke 权限列表 ON 表名.* from '用户名'@'主机IP地址';<span aria-hid
 <p>• 第三范式：不含传递依赖（间接依赖）</p>
 <p>• 使用范式可以减少冗余，但是会降低性能</p>
 <p>• 特定表的的设计可以违反第三范式，增加冗余提高性能</p>
-<h1 id="第十三章-经典问题-出现问题时与之对应"><a href="#第十三章-经典问题-出现问题时与之对应" class="headerlink" title="第十三章  经典问题(出现问题时与之对应)"></a>第十三章  经典问题(出现问题时与之对应)</h1><h2 id="1、编码问题"><a href="#1、编码问题" class="headerlink" title="1、编码问题"></a>1、编码问题</h2><h3 id="命令行操作sql乱码问题"><a href="#命令行操作sql乱码问题" class="headerlink" title="命令行操作sql乱码问题"></a>命令行操作sql乱码问题</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; INSERT INTO t_stu VALUES(1,'张三','男');
+<h1 id="12-经典问题-出现问题时与之对应"><a href="#12-经典问题-出现问题时与之对应" class="headerlink" title="12  经典问题(出现问题时与之对应)"></a>12  经典问题(出现问题时与之对应)</h1><h2 id="1、编码问题"><a href="#1、编码问题" class="headerlink" title="1、编码问题"></a>1、编码问题</h2><h3 id="命令行操作sql乱码问题"><a href="#命令行操作sql乱码问题" class="headerlink" title="命令行操作sql乱码问题"></a>命令行操作sql乱码问题</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; INSERT INTO t_stu VALUES(1,'张三','男');
 ERROR 1366 (HY000): Incorrect string value: '\xD5\xC5\xC8\xFD' for column 'sname' at row 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="修改my-ini配置文件"><a href="#修改my-ini配置文件" class="headerlink" title="修改my.ini配置文件"></a>修改my.ini配置文件</h3><pre class="line-numbers language-ini" data-language="ini"><code class="language-ini">在路径：C:\ProgramData\MySQL\MySQL Server 5.7\my.ini 找到my.ini文件
@@ -3153,7 +3117,7 @@ ERROR 1366 (HY000): Incorrect string value: '\xD5\xC5\xC8\xFD' for column 'sname
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">114.3k</span>&nbsp;字
+                class="white-color">107.8k</span>&nbsp;字
             
             
             
