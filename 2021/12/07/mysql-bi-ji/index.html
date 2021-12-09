@@ -108,28 +108,6 @@
     
   </li>
   
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/friends" class="waves-effect waves-light">
-      
-      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
-      
-      <span>友情链接</span>
-    </a>
-    
-  </li>
-  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
@@ -207,28 +185,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/friends" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-address-book"></i>
-			
-			友情链接
 		</a>
           
         </li>
@@ -525,24 +481,24 @@ Enter Password:密码<span aria-hidden="true" class="line-numbers-rows"><span></
 <li><p>set集合类型，可以包含0~64个成员。一次可以从集合中选择多个成员。如果选择了1-8个成员的集合，占1个字节，依次占2个，3个。。8个字节。例如：hoppy  set(‘吃饭’,’睡觉’,’玩游戏’,’旅游’)，选择时’吃饭,睡觉’或’睡觉,玩游戏,旅游’</p>
 </li>
 </ul>
-<h3 id="4、示例"><a href="#4、示例" class="headerlink" title="4、示例"></a>4、示例</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">+----------------+--------------+------+-----+---------+----------------+
-| Field          | Type         | Null | Key | Default | Extra          |
-+----------------+--------------+------+-----+---------+----------------+
-| eid            | int(11)      | NO   | PRI | NULL    | auto_increment |
-| ename          | varchar(20)  | NO   |     | NULL    |                |
-| tel            | char(11)     | NO   |     | NULL    |                |
-| gender         | char(1)      | YES  |     | 男        |                |
-| salary         | double       | YES  |     | NULL    |                |
-| commission_pct | double(3,2)  | YES  |     | NULL    |                |
-| birthday       | date         | YES  |     | NULL    |                |
-| hiredate       | date         | YES  |     | NULL    |                |
-| job_id         | int(11)      | YES  |     | NULL    |                |
-| email          | varchar(32)  | YES  |     | NULL    |                |
-| mid            | int(11)      | YES  |     | NULL    |                |
-| address        | varchar(150) | YES  |     | NULL    |                |
-| native_place   | varchar(10)  | YES  |     | NULL    |                |
-| did            | int(11)      | YES  |     | NULL    |                |
-+----------------+--------------+------+-----+---------+----------------+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="4、示例"><a href="#4、示例" class="headerlink" title="4、示例"></a>4、示例</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token operator">+</span><span class="token comment">----------------+--------------+------+-----+---------+----------------+</span>
+<span class="token operator">|</span> Field          <span class="token operator">|</span> <span class="token keyword">Type</span>         <span class="token operator">|</span> <span class="token boolean">Null</span> <span class="token operator">|</span> <span class="token keyword">Key</span> <span class="token operator">|</span> <span class="token keyword">Default</span> <span class="token operator">|</span> Extra          <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment">----------------+--------------+------+-----+---------+----------------+</span>
+<span class="token operator">|</span> eid            <span class="token operator">|</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>      <span class="token operator">|</span> <span class="token keyword">NO</span>   <span class="token operator">|</span> PRI <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span> <span class="token keyword">auto_increment</span> <span class="token operator">|</span>
+<span class="token operator">|</span> ename          <span class="token operator">|</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>  <span class="token operator">|</span> <span class="token keyword">NO</span>   <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> tel            <span class="token operator">|</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>     <span class="token operator">|</span> <span class="token keyword">NO</span>   <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> gender         <span class="token operator">|</span> <span class="token keyword">char</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>      <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> 男        <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> salary         <span class="token operator">|</span> <span class="token keyword">double</span>       <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> commission_pct <span class="token operator">|</span> <span class="token keyword">double</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> birthday       <span class="token operator">|</span> <span class="token keyword">date</span>         <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> hiredate       <span class="token operator">|</span> <span class="token keyword">date</span>         <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> job_id         <span class="token operator">|</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>      <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> email          <span class="token operator">|</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span>  <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> mid            <span class="token operator">|</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>      <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> address        <span class="token operator">|</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">150</span><span class="token punctuation">)</span> <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> native_place   <span class="token operator">|</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>  <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">|</span> did            <span class="token operator">|</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span>      <span class="token operator">|</span> YES  <span class="token operator">|</span>     <span class="token operator">|</span> <span class="token boolean">NULL</span>    <span class="token operator">|</span>                <span class="token operator">|</span>
+<span class="token operator">+</span><span class="token comment">----------------+--------------+------+-----+---------+----------------+</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -569,23 +525,23 @@ Enter Password:密码<span aria-hidden="true" class="line-numbers-rows"><span></
 <p>单行注释：–空格注释内容    其中–后面的空格必须有</p>
 <p>多行注释：/* 注释内容 */</p>
 </blockquote>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#以下两句是一样的，不区分大小写
-show databases;
-SHOW DATABASES;
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#以下两句是一样的，不区分大小写</span>
+<span class="token keyword">show</span> <span class="token keyword">databases</span><span class="token punctuation">;</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">DATABASES</span><span class="token punctuation">;</span>
 
-#创建表格
-#create table student info(...); #表名错误，因为表名有空格
-create table student_info(...); 
+<span class="token comment">#创建表格</span>
+<span class="token comment">#create table student info(...); #表名错误，因为表名有空格</span>
+<span class="token keyword">create</span> <span class="token keyword">table</span> student_info<span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
 
-#其中name使用``飘号，因为name和系统关键字或系统函数名等预定义标识符重名了。
-CREATE TABLE t_stu(
-    id INT,
-    `name` VARCHAR(20)
-);
+<span class="token comment">#其中name使用``飘号，因为name和系统关键字或系统函数名等预定义标识符重名了。</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> t_stu<span class="token punctuation">(</span>
+    id <span class="token keyword">INT</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">VARCHAR</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-select id as "编号", `name` as "姓名" from t_stu; #起别名时，as都可以省略
-select id as 编号, `name` as 姓名 from t_stu; #如果字段别名中没有空格，那么可以省略""
-select id as 编 号, `name` as 姓 名 from t_stu; #错误，如果字段别名中有空格，那么不能省略""<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">select</span> id <span class="token keyword">as</span> <span class="token string">"编号"</span><span class="token punctuation">,</span> <span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">as</span> <span class="token string">"姓名"</span> <span class="token keyword">from</span> t_stu<span class="token punctuation">;</span> <span class="token comment">#起别名时，as都可以省略</span>
+<span class="token keyword">select</span> id <span class="token keyword">as</span> 编号<span class="token punctuation">,</span> <span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">as</span> 姓名 <span class="token keyword">from</span> t_stu<span class="token punctuation">;</span> <span class="token comment">#如果字段别名中没有空格，那么可以省略""</span>
+<span class="token keyword">select</span> id <span class="token keyword">as</span> 编 号<span class="token punctuation">,</span> <span class="token punctuation">`</span>name<span class="token punctuation">`</span> <span class="token keyword">as</span> 姓 名 <span class="token keyword">from</span> t_stu<span class="token punctuation">;</span> <span class="token comment">#错误，如果字段别名中有空格，那么不能省略""</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="3-2-SQL分类"><a href="#3-2-SQL分类" class="headerlink" title="3.2 SQL分类"></a>3.2 SQL分类</h2><ul>
 <li><p>DDL (Data Definition Language) ：数据定义语言，定义库，表结构等，包括create,drop,alter等</p>
@@ -598,92 +554,92 @@ select id as 编 号, `name` as 姓 名 from t_stu; #错误，如果字段别名
 </li>
 </ul>
 <h2 id="3-3-DDL-v1-0"><a href="#3-3-DDL-v1-0" class="headerlink" title="3.3 DDL(v1.0)"></a>3.3 DDL(v1.0)</h2><p>1、查看所有数据库</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show databases;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">show</span> <span class="token keyword">databases</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>2、指定使用某个数据库</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">use 数据库名;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">use</span> 数据库名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>3、创建数据库</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database 数据库名;
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名<span class="token punctuation">;</span>
 
-create database 数据库名 charset 'utf8'; #在mysql中字符集名称不要使用utf-8
+<span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名 <span class="token keyword">charset</span> <span class="token string">'utf8'</span><span class="token punctuation">;</span> <span class="token comment">#在mysql中字符集名称不要使用utf-8</span>
 
-create database 数据库名 charset 'gbk';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">database</span> 数据库名 <span class="token keyword">charset</span> <span class="token string">'gbk'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>4、删除数据库</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">drop database 数据库名;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">database</span> 数据库名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>5、查看某个库下的所有表格</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">show tables ;  #前提是前面有use 数据库名;的语句
-show tables from 数据库名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">show</span> <span class="token keyword">tables</span> <span class="token punctuation">;</span>  <span class="token comment">#前提是前面有use 数据库名;的语句</span>
+<span class="token keyword">show</span> <span class="token keyword">tables</span> <span class="token keyword">from</span> 数据库名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>6、创建表格</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 【数据名.】表名(
-	字段名1 数据类型,
-	字段名2 数据类型,
-	....
-);
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型<span class="token punctuation">,</span>
+	字段名<span class="token number">2</span> 数据类型<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>7、删除表格</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">drop table 【数据库名.]表名称;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">drop</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>8、查看某个表结构</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">describe 【数据库名.]表名称;
-desc 【数据库名.]表名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">describe</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">;</span>
+<span class="token keyword">desc</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>9、增加一列</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 【数据库名.]表名称 add 【column】 字段名 数据类型;
-alter table 【数据库名.]表名称 add 【column】 字段名 数据类型 first;
-alter table 【数据库名.]表名称 add 【column】 字段名 数据类型 after 另一个字段;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">add</span> 【<span class="token keyword">column</span>】 字段名 数据类型<span class="token punctuation">;</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">add</span> 【<span class="token keyword">column</span>】 字段名 数据类型 <span class="token keyword">first</span><span class="token punctuation">;</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">add</span> 【<span class="token keyword">column</span>】 字段名 数据类型 <span class="token keyword">after</span> 另一个字段<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>10、删除一列</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 【数据库名.]表名称 drop 【column】 字段名;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">drop</span> 【<span class="token keyword">column</span>】 字段名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>11、修改列数据类型</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 【数据库名.]表名称 modify 【column】 字段名 新数据类型;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">modify</span> 【<span class="token keyword">column</span>】 字段名 新数据类型<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>12、修改列名</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 【数据库名.]表名称 change【column】 旧字段名 新字段名 新数据类型;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 change【<span class="token keyword">column</span>】 旧字段名 新字段名 新数据类型<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>13、修改列的位置</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 【数据库名.]表名称 modify 【column】字段名 数据类型 first;
-alter table 【数据库名.]表名称 modify 【column】字段名 数据类型 after 另一个字段;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">modify</span> 【<span class="token keyword">column</span>】字段名 数据类型 <span class="token keyword">first</span><span class="token punctuation">;</span>
+<span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">modify</span> 【<span class="token keyword">column</span>】字段名 数据类型 <span class="token keyword">after</span> 另一个字段<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>14、修改表名称</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 旧表名 rename 新表名;
-rename table 旧表名 to 新表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 旧表名 <span class="token keyword">rename</span> 新表名<span class="token punctuation">;</span>
+<span class="token keyword">rename</span> <span class="token keyword">table</span> 旧表名 <span class="token keyword">to</span> 新表名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
 <h2 id="3-4-DML-v1-0"><a href="#3-4-DML-v1-0" class="headerlink" title="3.4 DML(v1.0)"></a>3.4 DML(v1.0)</h2><p>1、添加数据</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into 【数据库名.]表名称 values(值列表)； 
-#要求值列表的顺序、个数、类型，要与表格中的字段的顺序、个数、类型一一匹配
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token punctuation">)</span>； 
+<span class="token comment">#要求值列表的顺序、个数、类型，要与表格中的字段的顺序、个数、类型一一匹配</span>
 
-insert into 【数据库名.]表名称(部分字段列表) values(值列表)；
-#要求列表的顺序、个数、类型，要与前面的(部分字段列表)的顺序、个数、类型一一匹配
+<span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">(</span>部分字段列表<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token punctuation">)</span>；
+<span class="token comment">#要求列表的顺序、个数、类型，要与前面的(部分字段列表)的顺序、个数、类型一一匹配</span>
 
-insert into 【数据库名.]表名称 values(值列表1)，(值列表2)。。。;
+<span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token number">1</span><span class="token punctuation">)</span>，<span class="token punctuation">(</span>值列表<span class="token number">2</span><span class="token punctuation">)</span>。。。<span class="token punctuation">;</span>
 
-insert into 【数据库名.]表名称(部分字段列表) values(值列表1)，(值列表2)。。。;
+<span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">(</span>部分字段列表<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token number">1</span><span class="token punctuation">)</span>，<span class="token punctuation">(</span>值列表<span class="token number">2</span><span class="token punctuation">)</span>。。。<span class="token punctuation">;</span>
 
-insert into [数据库名.]表名 set 字段名=值, 字段名=值......;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> <span class="token punctuation">[</span>数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名 <span class="token keyword">set</span> 字段名<span class="token operator">=</span>值<span class="token punctuation">,</span> 字段名<span class="token operator">=</span>值<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>2、修改数据</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">update 【数据库名.]表名称 set 字段名1 = 值1, 字段名2 = 值2 。。。 【where 条件】;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">update</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">set</span> 字段名<span class="token number">1</span> <span class="token operator">=</span> 值<span class="token number">1</span><span class="token punctuation">,</span> 字段名<span class="token number">2</span> <span class="token operator">=</span> 值<span class="token number">2</span> 。。。 【<span class="token keyword">where</span> 条件】<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
 <p>如果没有加where条件，表示修改所有行，这个字段的值</p>
 </blockquote>
 <p>3、删除数据</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">delete from 【数据库名.]表名称 【where 条件】;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">delete</span> <span class="token keyword">from</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 【<span class="token keyword">where</span> 条件】<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <blockquote>
 <p>如果没有where条件，表示删除整张表的数据;</p>
 </blockquote>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">truncate 【数据库名.]表名称;#删除整张表的数据，还可以使用这个语句，效率更高，但是它不能回滚<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">truncate</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">;</span><span class="token comment">#删除整张表的数据，还可以使用这个语句，效率更高，但是它不能回滚</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>用delete删除整张表和用truncate删除整张表的数据的区别？</p>
 <p>（1）truncate速度快</p>
@@ -691,13 +647,13 @@ insert into [数据库名.]表名 set 字段名=值, 字段名=值......;<span a
 <p>truncate因为底层是把表drop掉，然后新建了一张空表。</p>
 <p>delete因为底层是一行一行删数据。</p>
 <p>4、简单查询数据</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select * from 【数据库名.]表名称; #查询整张表的所有数据
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">;</span> <span class="token comment">#查询整张表的所有数据</span>
 
-select 字段列表  from 【数据库名.]表名称;  #查询部分列表
+<span class="token keyword">select</span> 字段列表  <span class="token keyword">from</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">;</span>  <span class="token comment">#查询部分列表</span>
 
-select * from 【数据库名.]表名称 【where 条件】;
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 【<span class="token keyword">where</span> 条件】<span class="token punctuation">;</span>
 
-select 字段列表  from 【数据库名.]表名称 【where 条件】;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">select</span> 字段列表  <span class="token keyword">from</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 【<span class="token keyword">where</span> 条件】<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>使用distinct可以对查询结果进行去重</p>
@@ -749,10 +705,10 @@ Enter password: ****<span aria-hidden="true" class="line-numbers-rows"><span></s
 逻辑异或： <span class="token operator">xor</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>4、范围</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">区间范围：between x  and  y
-	    not between x  and  y
-集合范围：in (x,x,x)
-	    not  in(x,x,x)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">区间范围：<span class="token operator">between</span> x  <span class="token operator">and</span>  y
+	    <span class="token operator">not</span> <span class="token operator">between</span> x  <span class="token operator">and</span>  y
+集合范围：<span class="token operator">in</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span>x<span class="token punctuation">,</span>x<span class="token punctuation">)</span>
+	    <span class="token operator">not</span>  <span class="token operator">in</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>x<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>5、模糊查询和正则匹配（只针对字符串类型，日期类型）</p>
 <pre class="line-numbers language-none"><code class="language-none">like 'xxx'
@@ -895,39 +851,39 @@ like '%x%' x代表确定的字符 %表示不确定的0~n个字符
 <p>删除唯一键的方式是通过删除对应的索引来实现的</p>
 <p>删除外键，外键列上的索引还在，如果需要删除，需要单独删除索引</p>
 </blockquote>
-<h2 id="4-2-DDL-v2-0"><a href="#4-2-DDL-v2-0" class="headerlink" title="4.2  DDL(v2.0)"></a>4.2  DDL(v2.0)</h2><h3 id="1、查看某个表的约束"><a href="#1、查看某个表的约束" class="headerlink" title="1、查看某个表的约束"></a>1、查看某个表的约束</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT * FROM information_schema.table_constraints WHERE table_name = '表名称';
+<h2 id="4-2-DDL-v2-0"><a href="#4-2-DDL-v2-0" class="headerlink" title="4.2  DDL(v2.0)"></a>4.2  DDL(v2.0)</h2><h3 id="1、查看某个表的约束"><a href="#1、查看某个表的约束" class="headerlink" title="1、查看某个表的约束"></a>1、查看某个表的约束</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> information_schema<span class="token punctuation">.</span>table_constraints <span class="token keyword">WHERE</span> table_name <span class="token operator">=</span> <span class="token string">'表名称'</span><span class="token punctuation">;</span>
 或
-SHOW CREATE TABLE 表名;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">SHOW</span> <span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> 表名<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2、查看某个表的索引"><a href="#2、查看某个表的索引" class="headerlink" title="2、查看某个表的索引"></a>2、查看某个表的索引</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SHOW INDEX FROM 表名称;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2、查看某个表的索引"><a href="#2、查看某个表的索引" class="headerlink" title="2、查看某个表的索引"></a>2、查看某个表的索引</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">SHOW</span> <span class="token keyword">INDEX</span> <span class="token keyword">FROM</span> 表名称<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="3、主键约束：primary-key"><a href="#3、主键约束：primary-key" class="headerlink" title="3、主键约束：primary key"></a>3、主键约束：primary key</h3><p>主键分为单列主键和复合主键：</p>
 <p><img src="http://imag.fun-ny.cn/img/1561002222421.png" alt="1561002222421"></p>
 <p>主键的特点：（1）唯一并且非空（2）一个表只能有一个主键约束（3）主键约束名就叫做PRIMARY（4）创建主键会自动创建对应的索引，同样删除主键对应的索引也会删除。</p>
 <p>（1）如何在建表时指定主键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 【数据名.】表名(
-	字段名1 数据类型  primary key ,
-	....
-);
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 或
-create table 【数据名.】表名(
-	字段名1 数据类型,
-	....,
-    primary key(字段名1)
-);
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>字段名<span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 或
-create table 【数据名.】表名(
-    字段名1 数据类型,
-    字段名2 数据类型,
-	....,
-    primary key(复合主键字段列表)#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+    字段名<span class="token number">1</span> 数据类型<span class="token punctuation">,</span>
+    字段名<span class="token number">2</span> 数据类型<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合主键字段列表<span class="token punctuation">)</span><span class="token comment">#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（2）如何在建表后指定主键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名称 add primary key (主键字段列表);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名称 <span class="token keyword">add</span> <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>主键字段列表<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>（3）如何删除主键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名称 drop primary key;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名称 <span class="token keyword">drop</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="4、唯一键约束：unique-key"><a href="#4、唯一键约束：unique-key" class="headerlink" title="4、唯一键约束：unique key"></a>4、唯一键约束：unique key</h3><p>（1）唯一键约束特点</p>
 <ul>
@@ -944,98 +900,98 @@ create table 【数据名.】表名(
 <li>删除唯一键只能通过删除对应索引的方式删除，删除时需要指定唯一键索引名</li>
 </ul>
 <p>（2）如何在建表时指定唯一键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 【数据名.】表名(
-	字段名1 数据类型  primary key ,
-	字段名2 数据类型 unique key,
-	....
-);
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">,</span>
+	字段名<span class="token number">2</span> 数据类型 <span class="token keyword">unique</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-create table 【数据名.】表名(
-    字段名1 数据类型  primary key ,
-    字段名2 数据类型,
-    字段名3 数据类型,
-	....,
-    unique key(复合唯一字段列表)#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+    字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">,</span>
+    字段名<span class="token number">2</span> 数据类型<span class="token punctuation">,</span>
+    字段名<span class="token number">3</span> 数据类型<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">unique</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合唯一字段列表<span class="token punctuation">)</span><span class="token comment">#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（3）如何在建表后增加唯一键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 表名称 add 【constraint 约束名】 unique 【key】 (字段名列表);
-#如果没有指定约束名，(字段名列表)中只有一个字段的，默认是该字段名，如果是多个字段的默认是字段名列表的第1个字段名。也可以通过show index from 表名;来查看<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 表名称 <span class="token keyword">add</span> 【<span class="token keyword">constraint</span> 约束名】 <span class="token keyword">unique</span> 【<span class="token keyword">key</span>】 <span class="token punctuation">(</span>字段名列表<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">#如果没有指定约束名，(字段名列表)中只有一个字段的，默认是该字段名，如果是多个字段的默认是字段名列表的第1个字段名。也可以通过show index from 表名;来查看</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>（4）如何删除唯一键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">ALTER TABLE 表名称 DROP INDEX 唯一性约束名;
-#注意：如果忘记名称，可以通过“show index from 表名称;”查看<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 表名称 <span class="token keyword">DROP</span> <span class="token keyword">INDEX</span> 唯一性约束名<span class="token punctuation">;</span>
+<span class="token comment">#注意：如果忘记名称，可以通过“show index from 表名称;”查看</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="5、非空约束：not-null"><a href="#5、非空约束：not-null" class="headerlink" title="5、非空约束：not null"></a>5、非空约束：not null</h3><p>NOT NULL 非空约束，规定某个字段不能为空</p>
 <p>（1）如何在建表时给某个字段指定非空约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 【数据名.】表名(
-	字段名1 数据类型  primary key ,
-	字段名2 数据类型 【unique key】 【not null】,
-	....,
-    foreign key (从表字段) references 主表名(主表字段) 【on update 外键约束等级】【on delete 外键约束等级【
-    #外键只能在所有字段列表后面单独指定
-);
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">,</span>
+	字段名<span class="token number">2</span> 数据类型 【<span class="token keyword">unique</span> <span class="token keyword">key</span>】 【<span class="token operator">not</span> <span class="token boolean">null</span>】<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>从表字段<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名<span class="token punctuation">(</span>主表字段<span class="token punctuation">)</span> 【<span class="token keyword">on</span> <span class="token keyword">update</span> 外键约束等级】【<span class="token keyword">on</span> <span class="token keyword">delete</span> 外键约束等级【
+    <span class="token comment">#外键只能在所有字段列表后面单独指定</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-create table 【数据名.】表名(
-    字段名1 数据类型 【not null】,
-    字段名2 数据类型 【not null】,
-	....,
-    primary key(复合主键字段列表),#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key
-    unique key(复合唯一字段列表),#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key
-    foreign key (从表字段) references 主表名(主表字段) 【on update 外键约束等级】【on delete 外键约束等级【
-    #外键只能在所有字段列表后面单独指定
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+    字段名<span class="token number">1</span> 数据类型 【<span class="token operator">not</span> <span class="token boolean">null</span>】<span class="token punctuation">,</span>
+    字段名<span class="token number">2</span> 数据类型 【<span class="token operator">not</span> <span class="token boolean">null</span>】<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合主键字段列表<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key</span>
+    <span class="token keyword">unique</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合唯一字段列表<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>从表字段<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名<span class="token punctuation">(</span>主表字段<span class="token punctuation">)</span> 【<span class="token keyword">on</span> <span class="token keyword">update</span> 外键约束等级】【<span class="token keyword">on</span> <span class="token keyword">delete</span> 外键约束等级【
+    <span class="token comment">#外键只能在所有字段列表后面单独指定</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（2）如何在建表后指定某个字段非空</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">ALTER TABLE 表名称 MODIFY 字段名 数据类型 NOT NULL 【default 默认值】;
-#如果该字段原来设置了默认值约束，要跟着一起再写一遍，否则默认值约束会丢失<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 表名称 <span class="token keyword">MODIFY</span> 字段名 数据类型 <span class="token operator">NOT</span> <span class="token boolean">NULL</span> 【<span class="token keyword">default</span> 默认值】<span class="token punctuation">;</span>
+<span class="token comment">#如果该字段原来设置了默认值约束，要跟着一起再写一遍，否则默认值约束会丢失</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>（3）如何在建表后取消某个字段非空</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">ALTER TABLE 表名称 MODIFY 字段名 数据类型 【default 默认值】;
-#如果该字段原来设置了默认值约束，要跟着一起再写一遍，否则默认值约束会丢失<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 表名称 <span class="token keyword">MODIFY</span> 字段名 数据类型 【<span class="token keyword">default</span> 默认值】<span class="token punctuation">;</span>
+<span class="token comment">#如果该字段原来设置了默认值约束，要跟着一起再写一遍，否则默认值约束会丢失</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="6、默认值约束：default"><a href="#6、默认值约束：default" class="headerlink" title="6、默认值约束：default"></a>6、默认值约束：default</h3><p>（1）如何在建表时给某个字段指定默认约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 【数据名.】表名(
-	字段名1 数据类型  primary key ,
-	字段名2 数据类型 【unique key】 【not null】 【default 默认值】,
-	....,
-    foreign key (从表字段) references 主表名(主表字段) 【on update 外键约束等级】【on delete 外键约束等级【
-    #外键只能在所有字段列表后面单独指定
-);
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">,</span>
+	字段名<span class="token number">2</span> 数据类型 【<span class="token keyword">unique</span> <span class="token keyword">key</span>】 【<span class="token operator">not</span> <span class="token boolean">null</span>】 【<span class="token keyword">default</span> 默认值】<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>从表字段<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名<span class="token punctuation">(</span>主表字段<span class="token punctuation">)</span> 【<span class="token keyword">on</span> <span class="token keyword">update</span> 外键约束等级】【<span class="token keyword">on</span> <span class="token keyword">delete</span> 外键约束等级【
+    <span class="token comment">#外键只能在所有字段列表后面单独指定</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-create table 【数据名.】表名(
-    字段名1 数据类型 【not null】 【default 默认值】,
-    字段名2 数据类型 【not null】 【default 默认值】,
-	....,
-    primary key(复合主键字段列表),#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key
-    unique key(复合唯一字段列表),#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key
-    foreign key (从表字段) references 主表名(主表字段) 【on update 外键约束等级】【on delete 外键约束等级【
-    #外键只能在所有字段列表后面单独指定
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+    字段名<span class="token number">1</span> 数据类型 【<span class="token operator">not</span> <span class="token boolean">null</span>】 【<span class="token keyword">default</span> 默认值】<span class="token punctuation">,</span>
+    字段名<span class="token number">2</span> 数据类型 【<span class="token operator">not</span> <span class="token boolean">null</span>】 【<span class="token keyword">default</span> 默认值】<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合主键字段列表<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key</span>
+    <span class="token keyword">unique</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合唯一字段列表<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>从表字段<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名<span class="token punctuation">(</span>主表字段<span class="token punctuation">)</span> 【<span class="token keyword">on</span> <span class="token keyword">update</span> 外键约束等级】【<span class="token keyword">on</span> <span class="token keyword">delete</span> 外键约束等级【
+    <span class="token comment">#外键只能在所有字段列表后面单独指定</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（2）如何在建表后指定某个字段的默认值约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">ALTER TABLE 表名称 MODIFY 字段名 数据类型  【default 默认值】 【NOT NULL】;
-#如果该字段原来设置了非空约束，要跟着一起再写一遍，否则非空约束会丢失<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 表名称 <span class="token keyword">MODIFY</span> 字段名 数据类型  【<span class="token keyword">default</span> 默认值】 【<span class="token operator">NOT</span> <span class="token boolean">NULL</span>】<span class="token punctuation">;</span>
+<span class="token comment">#如果该字段原来设置了非空约束，要跟着一起再写一遍，否则非空约束会丢失</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>（3）如何在建表后取消某个字段的默认值约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">ALTER TABLE 表名称 MODIFY 字段名 数据类型 【NOT NULL】;
-#如果该字段原来设置了非空约束，要跟着一起再写一遍，否则非空约束会丢失<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 表名称 <span class="token keyword">MODIFY</span> 字段名 数据类型 【<span class="token operator">NOT</span> <span class="token boolean">NULL</span>】<span class="token punctuation">;</span>
+<span class="token comment">#如果该字段原来设置了非空约束，要跟着一起再写一遍，否则非空约束会丢失</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="7、检查约束：check"><a href="#7、检查约束：check" class="headerlink" title="7、检查约束：check"></a>7、检查约束：check</h3><p>检查约束，mysql暂不支持</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table stu(
-	sid int primary key,
-	sname varchar(20),
-	gender char check ('男'or'女')
-);
-insert into stu values(1,'张三','男');
-insert into stu values(2,'李四','妖');
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> stu<span class="token punctuation">(</span>
+	sid <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+	sname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	gender <span class="token keyword">char</span> <span class="token keyword">check</span> <span class="token punctuation">(</span><span class="token string">'男'</span><span class="token operator">or</span><span class="token string">'女'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> stu <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> stu <span class="token keyword">values</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">'李四'</span><span class="token punctuation">,</span><span class="token string">'妖'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 使用枚举类型解决如上问题：
-create table stu(
-	sid int primary key,
-	sname varchar(20),
-	gender enum ('男','女')
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">table</span> stu<span class="token punctuation">(</span>
+	sid <span class="token keyword">int</span> <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">,</span>
+	sname <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+	gender <span class="token keyword">enum</span> <span class="token punctuation">(</span><span class="token string">'男'</span><span class="token punctuation">,</span><span class="token string">'女'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1047,24 +1003,24 @@ create table stu(
 <li>InnoDB表的自动增长列可以手动插入，但是插入的值如果是空或者0，则实际插入的将是自动增长后的值。</li>
 </ul>
 <p>（2）如何在建表时指定自增长列</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 【数据名.】表名(
-	字段名1 数据类型  primary key auto_increment,
-	字段名2 数据类型 【unique key】 【not null】 【default 默认值】,
-	....
-);
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+	字段名<span class="token number">2</span> 数据类型 【<span class="token keyword">unique</span> <span class="token keyword">key</span>】 【<span class="token operator">not</span> <span class="token boolean">null</span>】 【<span class="token keyword">default</span> 默认值】<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 或
-create table 【数据名.】表名(
-	字段名1 数据类型  primary key ,
-	字段名2 数据类型 【unique key  not null】 auto_increment,
-	....
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">,</span>
+	字段名<span class="token number">2</span> 数据类型 【<span class="token keyword">unique</span> <span class="token keyword">key</span>  <span class="token operator">not</span> <span class="token boolean">null</span>】 <span class="token keyword">auto_increment</span><span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（3）如何在建表后指定自增长列</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 【数据名.】表名 modify 自增字段名 数据类型 auto_increment;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名 <span class="token keyword">modify</span> 自增字段名 数据类型 <span class="token keyword">auto_increment</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>（4）如何删除自增约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 【数据名.】表名 modify 自增字段名 数据类型;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名 <span class="token keyword">modify</span> 自增字段名 数据类型<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="9、外键约束：foreign-key"><a href="#9、外键约束：foreign-key" class="headerlink" title="9、外键约束：foreign key"></a>9、外键约束：foreign key</h3><p>外键约束（FOREIGN KEY，缩写FK）是用来实现数据库表的参照完整性的。外键约束可以使两张表紧密的结合起来，特别是针对修改或者删除的级联操作时，会保证数据的完整性。</p>
 <p>外键是指表中某个字段的值依赖于另一张表中某个字段的值，而<em><strong>被依赖的字段必须具有主键约束或者唯一约束</strong></em>。被依赖的表我们通常称之为父表或者主表，设置外键约束的表称为子表或者从表。</p>
@@ -1118,48 +1074,48 @@ create table 【数据名.】表名(
 </ul>
 <p>如果没有指定等级，就相当于Restrict方式</p>
 <p>（5）如何在建表时指定外键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table 【数据名.】从表名(
-	字段名1 数据类型  primary key ,
-	字段名2 数据类型 【unique key】,
-	....,
-    【constraint 外键约束名】 foreign key (从表字段) references 主表名(主表字段) 【on update 外键约束等级】【on delete 外键约束等级【
-    #外键只能在所有字段列表后面单独指定
-    #如果要自己命名外键约束名，建议 主表名_从表名_关联字段名_fk
-);
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】从表名<span class="token punctuation">(</span>
+	字段名<span class="token number">1</span> 数据类型  <span class="token keyword">primary</span> <span class="token keyword">key</span> <span class="token punctuation">,</span>
+	字段名<span class="token number">2</span> 数据类型 【<span class="token keyword">unique</span> <span class="token keyword">key</span>】<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    【<span class="token keyword">constraint</span> 外键约束名】 <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>从表字段<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名<span class="token punctuation">(</span>主表字段<span class="token punctuation">)</span> 【<span class="token keyword">on</span> <span class="token keyword">update</span> 外键约束等级】【<span class="token keyword">on</span> <span class="token keyword">delete</span> 外键约束等级【
+    <span class="token comment">#外键只能在所有字段列表后面单独指定</span>
+    <span class="token comment">#如果要自己命名外键约束名，建议 主表名_从表名_关联字段名_fk</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-create table 【数据名.】表名(
-    字段名1 数据类型,
-    字段名2 数据类型,
-	....,
-    primary key(复合主键字段列表),#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key
-    unique key(复合唯一字段列表),#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key
-    foreign key (从表字段) references 主表名(主表字段) 【on update 外键约束等级】【on delete 外键约束等级【
-    #外键只能在所有字段列表后面单独指定
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">create</span> <span class="token keyword">table</span> 【数据名<span class="token punctuation">.</span>】表名<span class="token punctuation">(</span>
+    字段名<span class="token number">1</span> 数据类型<span class="token punctuation">,</span>
+    字段名<span class="token number">2</span> 数据类型<span class="token punctuation">,</span>
+	<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span>
+    <span class="token keyword">primary</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合主键字段列表<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#如果是复合主键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加primary key</span>
+    <span class="token keyword">unique</span> <span class="token keyword">key</span><span class="token punctuation">(</span>复合唯一字段列表<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token comment">#如果是复合唯一键，那么就需要在所有字段列表后面使用这种形式指定，不能在字段后面直接加unique key</span>
+    <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>从表字段<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名<span class="token punctuation">(</span>主表字段<span class="token punctuation">)</span> 【<span class="token keyword">on</span> <span class="token keyword">update</span> 外键约束等级】【<span class="token keyword">on</span> <span class="token keyword">delete</span> 外键约束等级【
+    <span class="token comment">#外键只能在所有字段列表后面单独指定</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>（6）如何在建表后指定外键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">alter table 从表名称 add 【constraint 外键约束名】 foreign key (从表字段名) references 主表名(主表被参照字段名) 【on update xx】[on delete xx];<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">alter</span> <span class="token keyword">table</span> 从表名称 <span class="token keyword">add</span> 【<span class="token keyword">constraint</span> 外键约束名】 <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>从表字段名<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表名<span class="token punctuation">(</span>主表被参照字段名<span class="token punctuation">)</span> 【<span class="token keyword">on</span> <span class="token keyword">update</span> xx】<span class="token punctuation">[</span><span class="token keyword">on</span> <span class="token keyword">delete</span> xx<span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>（7）如何删除外键约束</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">ALTER TABLE 表名称 DROP FOREIGN KEY 外键约束名;
-#查看约束名 SELECT * FROM information_schema.table_constraints WHERE table_name = '表名称';
-#删除外键约束不会删除对应的索引，如果需要删除索引，需要用ALTER TABLE 表名称 DROP INDEX 索引名;
-#查看索引名 show index from 表名称;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">ALTER</span> <span class="token keyword">TABLE</span> 表名称 <span class="token keyword">DROP</span> <span class="token keyword">FOREIGN</span> <span class="token keyword">KEY</span> 外键约束名<span class="token punctuation">;</span>
+<span class="token comment">#查看约束名 SELECT * FROM information_schema.table_constraints WHERE table_name = '表名称';</span>
+<span class="token comment">#删除外键约束不会删除对应的索引，如果需要删除索引，需要用ALTER TABLE 表名称 DROP INDEX 索引名;</span>
+<span class="token comment">#查看索引名 show index from 表名称;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="4-3-DML-v2-0"><a href="#4-3-DML-v2-0" class="headerlink" title="4.3 DML(v2.0)"></a>4.3 DML(v2.0)</h2><p>1、如果某列有自增约束，怎么添加该字段的值</p>
 <p>添加数据时，对于自增列</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into 【数据库名.]表名称 values(值列表)；#在值列表中，对应自增列可以赋值为null和0
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token punctuation">)</span>；<span class="token comment">#在值列表中，对应自增列可以赋值为null和0</span>
 
-insert into 【数据库名.]表名称(部分字段列表) values(值列表)；#自增列在(部分字段列表)中不写就可以<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">(</span>部分字段列表<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token punctuation">)</span>；<span class="token comment">#自增列在(部分字段列表)中不写就可以</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>2、如果某列有默认值约束，怎么添加、修改该字段的值</p>
 <p>添加数据时，对于有默认值列</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into 【数据库名.]表名称 values(值列表)；#在值列表中，对应默认值列，如果想用默认值，用default
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token punctuation">)</span>；<span class="token comment">#在值列表中，对应默认值列，如果想用默认值，用default</span>
 
-insert into 【数据库名.]表名称(部分字段列表) values(值列表)；#对应默认值列，如果想用默认值，在(部分字段列表)中不写就可以<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">insert</span> <span class="token keyword">into</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称<span class="token punctuation">(</span>部分字段列表<span class="token punctuation">)</span> <span class="token keyword">values</span><span class="token punctuation">(</span>值列表<span class="token punctuation">)</span>；<span class="token comment">#对应默认值列，如果想用默认值，在(部分字段列表)中不写就可以</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>修改数据</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">update 【数据库名.]表名称 set 字段名1 = 值1, 字段名2 = 值2 。。。 【where 条件】; #对应默认值列，如果想用默认值，写字段名 = default就可以<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">update</span> 【数据库名<span class="token punctuation">.</span><span class="token punctuation">]</span>表名称 <span class="token keyword">set</span> 字段名<span class="token number">1</span> <span class="token operator">=</span> 值<span class="token number">1</span><span class="token punctuation">,</span> 字段名<span class="token number">2</span> <span class="token operator">=</span> 值<span class="token number">2</span> 。。。 【<span class="token keyword">where</span> 条件】<span class="token punctuation">;</span> <span class="token comment">#对应默认值列，如果想用默认值，写字段名 = default就可以</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h1 id="5-函数"><a href="#5-函数" class="headerlink" title="5 函数"></a>5 函数</h1><p><strong>两种SQL函数</strong></p>
 <p><img src="http://imag.fun-ny.cn/img/1557457787630.png" alt="1557457787630"></p>
@@ -1722,172 +1678,172 @@ FROM employees; <span aria-hidden="true" class="line-numbers-rows"><span></span>
 <p>（7）A∪B- A∩B    或者   (A -  A∩B) ∪ （B - A∩B）</p>
 <h2 id="6-2-如何实现？"><a href="#6-2-如何实现？" class="headerlink" title="6.2 如何实现？"></a>6.2 如何实现？</h2><p>（1）内连接</p>
 <p>（2）外连接：左外连接、右外连接、全外连接（mysql使用union代替全外连接）</p>
-<h3 id="1、内连接：实现A∩B"><a href="#1、内连接：实现A∩B" class="headerlink" title="1、内连接：实现A∩B"></a>1、内连接：实现A∩B</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 字段列表
-from A表 inner join B表
-on 关联条件
-where 等其他子句;
+<h3 id="1、内连接：实现A∩B"><a href="#1、内连接：实现A∩B" class="headerlink" title="1、内连接：实现A∩B"></a>1、内连接：实现A∩B</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">inner</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 等其他子句<span class="token punctuation">;</span>
 
 或
 
-select 字段列表
-from A表 , B表
-where 关联条件 and 等其他子句;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token punctuation">,</span> B表
+<span class="token keyword">where</span> 关联条件 <span class="token operator">and</span> 等其他子句<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>代码示例：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询员工的姓名和他所在的部门的名称
-#员工的姓名在t_employee
-#部门的名称在t_department
-SELECT ename "员工的姓名",dname "部门名称"
-FROM t_employee INNER JOIN t_department
-ON t_employee.did = t_department.did
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#查询员工的姓名和他所在的部门的名称</span>
+<span class="token comment">#员工的姓名在t_employee</span>
+<span class="token comment">#部门的名称在t_department</span>
+<span class="token keyword">SELECT</span> ename <span class="token string">"员工的姓名"</span><span class="token punctuation">,</span>dname <span class="token string">"部门名称"</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
 
-SELECT ename "员工的姓名",dname "部门名称"
-FROM t_employee , t_department
-WHERE t_employee.did = t_department.did
-
-
-#查询薪资高于20000的男员工的姓名和他所在的部门的名称
-SELECT ename "员工的姓名",dname "部门名称"
-FROM t_employee INNER JOIN t_department
-ON t_employee.did = t_department.did
-WHERE salary&gt;20000 AND gender = '男'<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">SELECT</span> ename <span class="token string">"员工的姓名"</span><span class="token punctuation">,</span>dname <span class="token string">"部门名称"</span>
+<span class="token keyword">FROM</span> t_employee <span class="token punctuation">,</span> t_department
+<span class="token keyword">WHERE</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
 
 
-
-<h3 id="2、左外连接"><a href="#2、左外连接" class="headerlink" title="2、左外连接"></a>2、左外连接</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#实现查询结果是A
-select 字段列表
-from A表 left join B表
-on 关联条件
-where 等其他子句;
-
-#实现A -  A∩B
-select 字段列表
-from A表 left join B表
-on 关联条件
-where 从表关联字段 is null and 等其他子句;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>代码示例：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询所有员工的姓名和他所在的部门的名称
-SELECT ename "员工的姓名",dname "部门名称"
-FROM t_employee LEFT JOIN t_department
-ON t_employee.did = t_department.did
-
-
-#查询所有没有部门的员工
-SELECT ename "员工的姓名",dname "部门名称"
-FROM t_employee LEFT JOIN t_department
-ON t_employee.did = t_department.did
-WHERE t_employee.did IS NULL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#查询薪资高于20000的男员工的姓名和他所在的部门的名称</span>
+<span class="token keyword">SELECT</span> ename <span class="token string">"员工的姓名"</span><span class="token punctuation">,</span>dname <span class="token string">"部门名称"</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
+<span class="token keyword">WHERE</span> salary<span class="token operator">&gt;</span><span class="token number">20000</span> <span class="token operator">AND</span> gender <span class="token operator">=</span> <span class="token string">'男'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h3 id="3、右外连接"><a href="#3、右外连接" class="headerlink" title="3、右外连接"></a>3、右外连接</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#实现查询结果是B
-select 字段列表
-from A表 right join B表
-on 关联条件
-where 等其他子句;
+<h3 id="2、左外连接"><a href="#2、左外连接" class="headerlink" title="2、左外连接"></a>2、左外连接</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#实现查询结果是A</span>
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">left</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 等其他子句<span class="token punctuation">;</span>
 
-#实现B -  A∩B
-select 字段列表
-from A表 right join B表
-on 关联条件
-where 从表关联字段 is null and 等其他子句;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#实现A -  A∩B</span>
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">left</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 从表关联字段 <span class="token operator">is</span> <span class="token boolean">null</span> <span class="token operator">and</span> 等其他子句<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>代码示例：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询所有部门，以及所有部门下的员工信息
-SELECT * 
-FROM t_employee RIGHT JOIN t_department
-ON t_employee.did = t_department.did
-
-#查询那些没有员工属于它的部门
-SELECT * 
-FROM t_employee RIGHT JOIN t_department
-ON t_employee.did = t_department.did
-WHERE t_employee.did IS NULL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#查询所有员工的姓名和他所在的部门的名称</span>
+<span class="token keyword">SELECT</span> ename <span class="token string">"员工的姓名"</span><span class="token punctuation">,</span>dname <span class="token string">"部门名称"</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
 
 
-
-<h3 id="4、用union代替全外连接"><a href="#4、用union代替全外连接" class="headerlink" title="4、用union代替全外连接"></a>4、用union代替全外连接</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#实现查询结果是A∪B
-#用左外的A，union 右外的B
-select 字段列表
-from A表 left join B表
-on 关联条件
-where 等其他子句
-
-union 
-
-select 字段列表
-from A表 right join B表
-on 关联条件
-where 等其他子句;
+<span class="token comment">#查询所有没有部门的员工</span>
+<span class="token keyword">SELECT</span> ename <span class="token string">"员工的姓名"</span><span class="token punctuation">,</span>dname <span class="token string">"部门名称"</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
+<span class="token keyword">WHERE</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">IS</span> <span class="token boolean">NULL</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-#实现A∪B -  A∩B  或   (A -  A∩B) ∪ （B - A∩B）
-#使用左外的 (A -  A∩B)  union 右外的（B - A∩B）
-select 字段列表
-from A表 left join B表
-on 关联条件
-where 从表关联字段 is null and 等其他子句
+<h3 id="3、右外连接"><a href="#3、右外连接" class="headerlink" title="3、右外连接"></a>3、右外连接</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#实现查询结果是B</span>
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">right</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 等其他子句<span class="token punctuation">;</span>
 
-union
-
-select 字段列表
-from A表 right join B表
-on 关联条件
-where 从表关联字段 is null and 等其他子句<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">#实现B -  A∩B</span>
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">right</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 从表关联字段 <span class="token operator">is</span> <span class="token boolean">null</span> <span class="token operator">and</span> 等其他子句<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>代码示例：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询所有员工，所有部门，包括没有员工的部门，和没有部门的员工
-SELECT *
-FROM t_employee LEFT JOIN t_department
-ON t_employee.did = t_department.did
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#查询所有部门，以及所有部门下的员工信息</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
 
-UNION
+<span class="token comment">#查询那些没有员工属于它的部门</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> 
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
+<span class="token keyword">WHERE</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">IS</span> <span class="token boolean">NULL</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-SELECT *
-FROM t_employee RIGHT JOIN t_department
-ON t_employee.did = t_department.did
 
 
-#查询那些没有部门的员工和所有没有员工的部门
+<h3 id="4、用union代替全外连接"><a href="#4、用union代替全外连接" class="headerlink" title="4、用union代替全外连接"></a>4、用union代替全外连接</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#实现查询结果是A∪B</span>
+<span class="token comment">#用左外的A，union 右外的B</span>
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">left</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 等其他子句
 
-#没有部门的员工
-SELECT *
-FROM t_employee LEFT JOIN t_department
-ON t_employee.did = t_department.did
-WHERE t_employee.did IS NULL
+<span class="token keyword">union</span> 
 
-UNION 
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">right</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 等其他子句<span class="token punctuation">;</span>
 
-#所有没有员工的部门
-SELECT *
-FROM t_employee RIGHT JOIN t_department
-ON t_employee.did = t_department.did
-WHERE t_employee.did IS NULL
+
+
+<span class="token comment">#实现A∪B -  A∩B  或   (A -  A∩B) ∪ （B - A∩B）</span>
+<span class="token comment">#使用左外的 (A -  A∩B)  union 右外的（B - A∩B）</span>
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">left</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 从表关联字段 <span class="token operator">is</span> <span class="token boolean">null</span> <span class="token operator">and</span> 等其他子句
+
+<span class="token keyword">union</span>
+
+<span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> A表 <span class="token keyword">right</span> <span class="token keyword">join</span> B表
+<span class="token keyword">on</span> 关联条件
+<span class="token keyword">where</span> 从表关联字段 <span class="token operator">is</span> <span class="token boolean">null</span> <span class="token operator">and</span> 等其他子句<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>代码示例：</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#查询所有员工，所有部门，包括没有员工的部门，和没有部门的员工</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
+
+<span class="token keyword">UNION</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
+
+
+<span class="token comment">#查询那些没有部门的员工和所有没有员工的部门</span>
+
+<span class="token comment">#没有部门的员工</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
+<span class="token keyword">WHERE</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">IS</span> <span class="token boolean">NULL</span>
+
+<span class="token keyword">UNION</span> 
+
+<span class="token comment">#所有没有员工的部门</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> t_employee <span class="token keyword">RIGHT</span> <span class="token keyword">JOIN</span> t_department
+<span class="token keyword">ON</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">=</span> t_department<span class="token punctuation">.</span>did
+<span class="token keyword">WHERE</span> t_employee<span class="token punctuation">.</span>did <span class="token operator">IS</span> <span class="token boolean">NULL</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <h2 id="6-3-特殊的关联查询：自连接"><a href="#6-3-特殊的关联查询：自连接" class="headerlink" title="6.3 特殊的关联查询：自连接"></a>6.3 特殊的关联查询：自连接</h2><p>两个关联查询的表是同一张表，通过取别名的方式来虚拟成两张表</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select 字段列表
-from 表名 别名1 inner/left/right join 表名 别名2
-on 别名1.关联字段 = 别名2的关联字段
-where 其他条件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> 字段列表
+<span class="token keyword">from</span> 表名 别名<span class="token number">1</span> <span class="token keyword">inner</span><span class="token operator">/</span><span class="token keyword">left</span><span class="token operator">/</span><span class="token keyword">right</span> <span class="token keyword">join</span> 表名 别名<span class="token number">2</span>
+<span class="token keyword">on</span> 别名<span class="token number">1.</span>关联字段 <span class="token operator">=</span> 别名<span class="token number">2</span>的关联字段
+<span class="token keyword">where</span> 其他条件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>代码示例：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询员工的编号，姓名，薪资和他领导的编号，姓名，薪资
-#这些数据全部在员工表中
-#把t_employee表，即当做员工表，又当做领导表
-#领导表是虚拟的概念，我们可以通过取别名的方式虚拟
-SELECT emp.eid "员工的编号",emp.ename "员工的姓名" ,emp.salary "员工的薪资",
-	mgr.eid "领导的编号" ,mgr.ename "领导的姓名",mgr.salary "领导的薪资"
-FROM t_employee emp INNER JOIN t_employee mgr
-#t_employee emp：如果用emp.，表示的是员工表的
-#t_employee mgr：如果用mgr.，表示的是领导表的
-ON emp.mid = mgr.eid
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#查询员工的编号，姓名，薪资和他领导的编号，姓名，薪资</span>
+<span class="token comment">#这些数据全部在员工表中</span>
+<span class="token comment">#把t_employee表，即当做员工表，又当做领导表</span>
+<span class="token comment">#领导表是虚拟的概念，我们可以通过取别名的方式虚拟</span>
+<span class="token keyword">SELECT</span> emp<span class="token punctuation">.</span>eid <span class="token string">"员工的编号"</span><span class="token punctuation">,</span>emp<span class="token punctuation">.</span>ename <span class="token string">"员工的姓名"</span> <span class="token punctuation">,</span>emp<span class="token punctuation">.</span>salary <span class="token string">"员工的薪资"</span><span class="token punctuation">,</span>
+	mgr<span class="token punctuation">.</span>eid <span class="token string">"领导的编号"</span> <span class="token punctuation">,</span>mgr<span class="token punctuation">.</span>ename <span class="token string">"领导的姓名"</span><span class="token punctuation">,</span>mgr<span class="token punctuation">.</span>salary <span class="token string">"领导的薪资"</span>
+<span class="token keyword">FROM</span> t_employee emp <span class="token keyword">INNER</span> <span class="token keyword">JOIN</span> t_employee mgr
+<span class="token comment">#t_employee emp：如果用emp.，表示的是员工表的</span>
+<span class="token comment">#t_employee mgr：如果用mgr.，表示的是领导表的</span>
+<span class="token keyword">ON</span> emp<span class="token punctuation">.</span>mid <span class="token operator">=</span> mgr<span class="token punctuation">.</span>eid
 
-#表的别名不要加""，给列取别名，可以用""，列的别名不使用""也可以，但是要避免包含空格等特殊符号。
+<span class="token comment">#表的别名不要加""，给列取别名，可以用""，列的别名不使用""也可以，但是要避免包含空格等特殊符号。</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
@@ -1900,15 +1856,15 @@ ON emp.mid = mgr.eid
 <p>（6）order by：排序</p>
 <p>（7）limit：分页</p>
 <p>必须按照（1）-（7）的顺序【编写】子句。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询每个部门的男生的人数，并且显示人数超过5人的，按照人数降序排列，
-#每页只能显示10条，我要第2页
-SELECT did,COUNT(*) "人数"
-FROM t_employee
-WHERE gender = '男'
-GROUP BY did
-HAVING COUNT(*)&gt;5
-ORDER BY 人数 DESC
-LIMIT 10,10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#查询每个部门的男生的人数，并且显示人数超过5人的，按照人数降序排列，</span>
+<span class="token comment">#每页只能显示10条，我要第2页</span>
+<span class="token keyword">SELECT</span> did<span class="token punctuation">,</span><span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token string">"人数"</span>
+<span class="token keyword">FROM</span> t_employee
+<span class="token keyword">WHERE</span> gender <span class="token operator">=</span> <span class="token string">'男'</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> did
+<span class="token keyword">HAVING</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token operator">&gt;</span><span class="token number">5</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 人数 <span class="token keyword">DESC</span>
+<span class="token keyword">LIMIT</span> <span class="token number">10</span><span class="token punctuation">,</span><span class="token number">10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="7-2-group-by与分组函数"><a href="#7-2-group-by与分组函数" class="headerlink" title="7.2 group by与分组函数"></a>7.2 group by与分组函数</h2><p><img src="http://imag.fun-ny.cn/img/1557457869608.png" alt="1557457869608"></p>
 <p><strong>可以使用GROUP BY子句将表中的数据分成若干组</strong></p>
@@ -1940,60 +1896,60 @@ LIMIT 10,10<span aria-hidden="true" class="line-numbers-rows"><span></span><span
 <ul>
 <li>统计各个部门的平均工资(只显示平均工资2000以上的)</li>
 </ul>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select avg(salary) from emp   -- 1 -- 不是各个部门的，是所有部门的  
-select deptno from emp  -- 14    
- --   14?  1?  字段不能和分组函数共存，除非该字段是分组group by字段  
-select deptno,avg(salary) from emp    
-select deptno, avg(salary) --   
-from  emp  
-group by  deptno;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">select</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token keyword">from</span> emp   <span class="token comment">-- 1 -- 不是各个部门的，是所有部门的  </span>
+<span class="token keyword">select</span> deptno <span class="token keyword">from</span> emp  <span class="token comment">-- 14    </span>
+ <span class="token comment">--   14?  1?  字段不能和分组函数共存，除非该字段是分组group by字段  </span>
+<span class="token keyword">select</span> deptno<span class="token punctuation">,</span><span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token keyword">from</span> emp    
+<span class="token keyword">select</span> deptno<span class="token punctuation">,</span> <span class="token function">avg</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token comment">--   </span>
+<span class="token keyword">from</span>  emp  
+<span class="token keyword">group</span> <span class="token keyword">by</span>  deptno<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>获取最小工资小于2000的职位</li>
 </ul>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">  -- min(sal)  job   min(sal)&lt;2000    
-  -- 获取各个职位的最小工资    
-  select job,min(sal)    
-  from emp    
-  group by job    
-  order by min(sal)    
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">  <span class="token comment">-- min(sal)  job   min(sal)&lt;2000    </span>
+  <span class="token comment">-- 获取各个职位的最小工资    </span>
+  <span class="token keyword">select</span> job<span class="token punctuation">,</span><span class="token function">min</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span>    
+  <span class="token keyword">from</span> emp    
+  <span class="token keyword">group</span> <span class="token keyword">by</span> job    
+  <span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">min</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span>    
   
-  -- 获取各个职位的最小工资,筛选出小于2000的    
-  select job,min(sal)    
-  from emp    
-  group by job    
-  having min(sal)&lt;2000    
-  order by min(sal)    
+  <span class="token comment">-- 获取各个职位的最小工资,筛选出小于2000的    </span>
+  <span class="token keyword">select</span> job<span class="token punctuation">,</span><span class="token function">min</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span>    
+  <span class="token keyword">from</span> emp    
+  <span class="token keyword">group</span> <span class="token keyword">by</span> job    
+  <span class="token keyword">having</span> <span class="token function">min</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">2000</span>    
+  <span class="token keyword">order</span> <span class="token keyword">by</span> <span class="token function">min</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span>    
   
--- 统计[人数小于4的]部门的平均工资。    
-   select deptno,count(1),avg(sal)    
-   from emp    
-   group by deptno    
-   having count(1)&lt;4    
--- 统计各部门的最高工资，排除最高工资小于3000的部门。    
-   select deptno,max(sal)    
-   from  emp    
-   group by deptno    
-   having max(sal) &gt;=3000 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">-- 统计[人数小于4的]部门的平均工资。    </span>
+   <span class="token keyword">select</span> deptno<span class="token punctuation">,</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">avg</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span>    
+   <span class="token keyword">from</span> emp    
+   <span class="token keyword">group</span> <span class="token keyword">by</span> deptno    
+   <span class="token keyword">having</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">&lt;</span><span class="token number">4</span>    
+<span class="token comment">-- 统计各部门的最高工资，排除最高工资小于3000的部门。    </span>
+   <span class="token keyword">select</span> deptno<span class="token punctuation">,</span><span class="token function">max</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span>    
+   <span class="token keyword">from</span>  emp    
+   <span class="token keyword">group</span> <span class="token keyword">by</span> deptno    
+   <span class="token keyword">having</span> <span class="token function">max</span><span class="token punctuation">(</span>sal<span class="token punctuation">)</span> <span class="token operator">&gt;=</span><span class="token number">3000</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>having与where的区别？</p>
 <p>（1）where是从表中筛选的条件，而having是分组（统计）结果中再次筛选</p>
 <p>（2）where后面不能加“分组/聚合函数”，而having后面可以跟分组函数</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#统计部门平均工资高于8000的部门和平均工资
-SELECT   department_id, AVG(salary)
-FROM     employees
-WHERE    AVG(salary) &gt; 8000 #错误
-GROUP BY department_id;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#统计部门平均工资高于8000的部门和平均工资</span>
+<span class="token keyword">SELECT</span>   department_id<span class="token punctuation">,</span> <span class="token function">AVG</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span>     employees
+<span class="token keyword">WHERE</span>    <span class="token function">AVG</span><span class="token punctuation">(</span>salary<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">8000</span> <span class="token comment">#错误</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> department_id<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="http://imag.fun-ny.cn/img/1557457937887.png" alt="1557457937887"></p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#统计每一个部门，薪资高于10000元的女员工的数量，显示人数超过1人
-SELECT did,COUNT(*)
-FROM t_employee
-WHERE gender ='女' AND salary&gt;10000
-GROUP BY did
-HAVING COUNT(*) &gt; 1;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">#统计每一个部门，薪资高于10000元的女员工的数量，显示人数超过1人</span>
+<span class="token keyword">SELECT</span> did<span class="token punctuation">,</span><span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> t_employee
+<span class="token keyword">WHERE</span> gender <span class="token operator">=</span><span class="token string">'女'</span> <span class="token operator">AND</span> salary<span class="token operator">&gt;</span><span class="token number">10000</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> did
+<span class="token keyword">HAVING</span> <span class="token function">COUNT</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="7-4-order-by"><a href="#7-4-order-by" class="headerlink" title="7.4 order by"></a>7.4 order by</h2><p>order by：</p>
 <p>降序：desc</p>
@@ -2003,10 +1959,10 @@ HAVING COUNT(*) &gt; 1;<span aria-hidden="true" class="line-numbers-rows"><span>
 <p>m = （第几页 - 1）*每页的数量</p>
 <p>n = 每页的数量</p>
 <p>代码示例：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">/*
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token comment">/*
 每页显示2条 展示第三页
-*/
-select * from emp limit 4,2;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+*/</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> emp <span class="token keyword">limit</span> <span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>求员工的姓名，薪水，部门编号，部门名称，工作编号，工作名称，按照薪水排序，每页显示3条显示第4页</li>
@@ -2047,9 +2003,9 @@ select * from emp limit 4,2;<span aria-hidden="true" class="line-numbers-rows"><
 <span class="token comment">-- 查询每个部门的编号，名称，平均工资</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="3、exists型"><a href="#3、exists型" class="headerlink" title="3、exists型"></a>3、exists型</h2><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">查询那些有员工的部门
-select 部门编号, 部门名称 from 部门表
-where exists (select * from 员工表  where 部门表.部门编号 = 员工表.部门编号);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="3、exists型"><a href="#3、exists型" class="headerlink" title="3、exists型"></a>3、exists型</h2><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">查询那些有员工的部门
+<span class="token keyword">select</span> 部门编号<span class="token punctuation">,</span> 部门名称 <span class="token keyword">from</span> 部门表
+<span class="token keyword">where</span> <span class="token keyword">exists</span> <span class="token punctuation">(</span><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> 员工表  <span class="token keyword">where</span> 部门表<span class="token punctuation">.</span>部门编号 <span class="token operator">=</span> 员工表<span class="token punctuation">.</span>部门编号<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -2189,23 +2145,23 @@ where exists (select * from 员工表  where 部门表.部门编号 = 员工表.
 
 <h3 id="4、授予和收回权限"><a href="#4、授予和收回权限" class="headerlink" title="4、授予和收回权限"></a>4、授予和收回权限</h3><p><img src="http://imag.fun-ny.cn/img/1561009821823.png" alt="1561009821823"></p>
 <p>对应语句：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">GRANT 权限列表 ON *.* TO '用户名'@'主机IP地址';  #全局
-GRANT 权限列表 ON 数据库名.* TO '用户名'@'主机IP地址'; #某个库
-GRANT 权限列表 ON 数据库名.表格 TO '用户名'@'主机IP地址'; #某个库的某个表
-GRANT 权限列表 ON 表名.* TO '用户名'@'主机IP地址';  #某个表的字段<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">GRANT</span> 权限列表 <span class="token keyword">ON</span> <span class="token operator">*</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">TO</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span>  <span class="token comment">#全局</span>
+<span class="token keyword">GRANT</span> 权限列表 <span class="token keyword">ON</span> 数据库名<span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">TO</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span> <span class="token comment">#某个库</span>
+<span class="token keyword">GRANT</span> 权限列表 <span class="token keyword">ON</span> 数据库名<span class="token punctuation">.</span>表格 <span class="token keyword">TO</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span> <span class="token comment">#某个库的某个表</span>
+<span class="token keyword">GRANT</span> 权限列表 <span class="token keyword">ON</span> 表名<span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">TO</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span>  <span class="token comment">#某个表的字段</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>例如：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">GRANT SELECT ON *.* TO 'gao'@'192.168.29.53';
-GRANT SELECT ON `test`.* TO 'gao'@'192.168.29.53';
-GRANT UPDATE ON `test`.`t_department` TO 'gao'@'192.168.29.53';
-GRANT UPDATE ON `t_department`.* TO 'gao'@'192.168.29.53';
-GRANT SELECT (tid), INSERT (tid), UPDATE (tid), REFERENCES (tid) ON `1101db`.`course` TO 'gao'@'192.168.29.30';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">GRANT</span> <span class="token keyword">SELECT</span> <span class="token keyword">ON</span> <span class="token operator">*</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">TO</span> <span class="token string">'gao'</span><span class="token variable">@'192.168.29.53'</span><span class="token punctuation">;</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">SELECT</span> <span class="token keyword">ON</span> <span class="token punctuation">`</span>test<span class="token punctuation">`</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">TO</span> <span class="token string">'gao'</span><span class="token variable">@'192.168.29.53'</span><span class="token punctuation">;</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">UPDATE</span> <span class="token keyword">ON</span> <span class="token punctuation">`</span>test<span class="token punctuation">`</span><span class="token punctuation">.</span><span class="token punctuation">`</span>t_department<span class="token punctuation">`</span> <span class="token keyword">TO</span> <span class="token string">'gao'</span><span class="token variable">@'192.168.29.53'</span><span class="token punctuation">;</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">UPDATE</span> <span class="token keyword">ON</span> <span class="token punctuation">`</span>t_department<span class="token punctuation">`</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">TO</span> <span class="token string">'gao'</span><span class="token variable">@'192.168.29.53'</span><span class="token punctuation">;</span>
+<span class="token keyword">GRANT</span> <span class="token keyword">SELECT</span> <span class="token punctuation">(</span>tid<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">INSERT</span> <span class="token punctuation">(</span>tid<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">UPDATE</span> <span class="token punctuation">(</span>tid<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">REFERENCES</span> <span class="token punctuation">(</span>tid<span class="token punctuation">)</span> <span class="token keyword">ON</span> <span class="token punctuation">`</span><span class="token number">1101</span>db<span class="token punctuation">`</span><span class="token punctuation">.</span><span class="token punctuation">`</span>course<span class="token punctuation">`</span> <span class="token keyword">TO</span> <span class="token string">'gao'</span><span class="token variable">@'192.168.29.30'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>收回权限：</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">revoke 权限列表 ON *.* from '用户名'@'主机IP地址';
-revoke 权限列表 ON 数据库名.* from '用户名'@'主机IP地址';
-revoke 权限列表 ON 数据库名.表格 from '用户名'@'主机IP地址';
-revoke 权限列表 ON 表名.* from '用户名'@'主机IP地址';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">revoke</span> 权限列表 <span class="token keyword">ON</span> <span class="token operator">*</span><span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span>
+<span class="token keyword">revoke</span> 权限列表 <span class="token keyword">ON</span> 数据库名<span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span>
+<span class="token keyword">revoke</span> 权限列表 <span class="token keyword">ON</span> 数据库名<span class="token punctuation">.</span>表格 <span class="token keyword">from</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span>
+<span class="token keyword">revoke</span> 权限列表 <span class="token keyword">ON</span> 表名<span class="token punctuation">.</span><span class="token operator">*</span> <span class="token keyword">from</span> <span class="token string">'用户名'</span><span class="token variable">@'主机IP地址'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -2620,8 +2576,8 @@ revoke 权限列表 ON 表名.* from '用户名'@'主机IP地址';<span aria-hid
 <p>• 第三范式：不含传递依赖（间接依赖）</p>
 <p>• 使用范式可以减少冗余，但是会降低性能</p>
 <p>• 特定表的的设计可以违反第三范式，增加冗余提高性能</p>
-<h1 id="12-经典问题-出现问题时与之对应"><a href="#12-经典问题-出现问题时与之对应" class="headerlink" title="12  经典问题(出现问题时与之对应)"></a>12  经典问题(出现问题时与之对应)</h1><h2 id="1、编码问题"><a href="#1、编码问题" class="headerlink" title="1、编码问题"></a>1、编码问题</h2><h3 id="命令行操作sql乱码问题"><a href="#命令行操作sql乱码问题" class="headerlink" title="命令行操作sql乱码问题"></a>命令行操作sql乱码问题</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; INSERT INTO t_stu VALUES(1,'张三','男');
-ERROR 1366 (HY000): Incorrect string value: '\xD5\xC5\xC8\xFD' for column 'sname' at row 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="12-经典问题-出现问题时与之对应"><a href="#12-经典问题-出现问题时与之对应" class="headerlink" title="12  经典问题(出现问题时与之对应)"></a>12  经典问题(出现问题时与之对应)</h1><h2 id="1、编码问题"><a href="#1、编码问题" class="headerlink" title="1、编码问题"></a>1、编码问题</h2><h3 id="命令行操作sql乱码问题"><a href="#命令行操作sql乱码问题" class="headerlink" title="命令行操作sql乱码问题"></a>命令行操作sql乱码问题</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">&gt;</span> <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> t_stu <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ERROR <span class="token number">1366</span> <span class="token punctuation">(</span>HY000<span class="token punctuation">)</span>: Incorrect string <span class="token keyword">value</span>: <span class="token string">'\xD5\xC5\xC8\xFD'</span> <span class="token keyword">for</span> <span class="token keyword">column</span> <span class="token string">'sname'</span> at <span class="token keyword">row</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="修改my-ini配置文件"><a href="#修改my-ini配置文件" class="headerlink" title="修改my.ini配置文件"></a>修改my.ini配置文件</h3><pre class="line-numbers language-ini" data-language="ini"><code class="language-ini">在路径：C:\ProgramData\MySQL\MySQL Server 5.7\my.ini 找到my.ini文件
 
@@ -2644,8 +2600,8 @@ ERROR 1366 (HY000): Incorrect string value: '\xD5\xC5\xC8\xFD' for column 'sname
 <ul>
 <li>如果是以上配置就说明对了</li>
 </ul>
-<h3 id="命令行操作sql仍然乱码问题"><a href="#命令行操作sql仍然乱码问题" class="headerlink" title="命令行操作sql仍然乱码问题"></a>命令行操作sql仍然乱码问题</h3><pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; INSERT INTO t_stu VALUES(1,'张三','男');
-ERROR 1366 (HY000): Incorrect string value: '\xD5\xC5\xC8\xFD' for column 'sname' at row 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="命令行操作sql仍然乱码问题"><a href="#命令行操作sql仍然乱码问题" class="headerlink" title="命令行操作sql仍然乱码问题"></a>命令行操作sql仍然乱码问题</h3><pre class="line-numbers language-sql" data-language="sql"><code class="language-sql">mysql<span class="token operator">&gt;</span> <span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> t_stu <span class="token keyword">VALUES</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">'张三'</span><span class="token punctuation">,</span><span class="token string">'男'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ERROR <span class="token number">1366</span> <span class="token punctuation">(</span>HY000<span class="token punctuation">)</span>: Incorrect string <span class="token keyword">value</span>: <span class="token string">'\xD5\xC5\xC8\xFD'</span> <span class="token keyword">for</span> <span class="token keyword">column</span> <span class="token string">'sname'</span> at <span class="token keyword">row</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>原因：按照刚才的配置，服务器端认为你的客户端的字符集是utf-8，而实际上你的客户端的字符集是GBK。</p>
 <p><img src="http://imag.fun-ny.cn/img/1557458006195.png" alt="1557458006195"></p>
@@ -3333,6 +3289,10 @@ $(function () {
 	
     
 
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
     
 
     
