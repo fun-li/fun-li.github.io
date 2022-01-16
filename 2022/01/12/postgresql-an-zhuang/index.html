@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ABAP限制SELECT-OPTIONS, fun-ny Blog">
+    <meta name="keywords" content="PostgreSQL 安装, fun-ny Blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ABAP限制SELECT-OPTIONS | fun-ny Blog</title>
+    <title>PostgreSQL 安装 | fun-ny Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -205,12 +205,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://imag.fun-ny.cn/infinity-895995.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://imag.fun-ny.cn/20418100_1638881942.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">ABAP限制SELECT-OPTIONS</h1>
+                    <h1 class="description center-align post-title">PostgreSQL 安装</h1>
                 </div>
             </div>
         </div>
@@ -326,8 +326,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ABAP/">
-                                <span class="chip bg-color">ABAP</span>
+                            <a href="/tags/SQL/">
+                                <span class="chip bg-color">SQL</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                <span class="chip bg-color">数据库</span>
                             </a>
                         
                     </div>
@@ -338,8 +342,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/ABAP/" class="post-category">
-                                ABAP
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                数据库
                             </a>
                         
                     </div>
@@ -351,21 +355,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-07
+                    2022-01-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-07
+                    2022-01-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    398
+                    257
                 </div>
                 
 
@@ -395,44 +399,49 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>写程序定义选择界面参数时，离不开parameters和select-options，今天我们就来聊一聊使用select-options时的一些限定情况。</p>
-<p>现有case如下，一个计划录入的程序，在显示计划选项下，需指定一天或者一段时间来展示对应的计划数据，也就是说只允许输入单值或者区间</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/bd3ba6c5395e578f6f04d263257a22e4.png" alt="img"></p>
-<p>我们第一印象是不是想在定义select-options时增加NO-EXTENSION来减少上图的多输入选项？</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/e4fd4d365a489bb817e5e13b0fbea1db.png" alt="img"></p>
-<p>那这样就能满足只能输入单值或者区间了吗？然并卵，并不是这样的，当我们在low值里双击时，即可指定跟多输入按钮一样的选项</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/b4d202df6f3feca772f77f5e9e49041d.png" alt="img"></p>
-<p>从上图我们可以看出，既有选择选项（SIGN为I），也有选择中排除选项（SIGN为E），总结起来，大概就是下图中这些选项（本例日期类型，所以下图中某些选项属性本身是没有的）</p>
-<p><img src="https://img-blog.csdnimg.cn/img_convert/3fbc54c88844b7a521076fde3370a1ab.png" alt="img"></p>
-<p>那么，是不是意味着，我需要哪些选项，我就启用哪些选项呢，yes，在这里给你一个大大的赞，确实是这样的。</p>
-<p>本例中只需要单值和区间，也就是说，只需要EQ和BT，并且Sign为I，代码示例如下：</p>
-<pre class="line-numbers language-abap" data-language="abap"><code class="language-abap"> <span class="token keyword">DATA</span><span class="token punctuation">:</span> ls_restrict <span class="token keyword">TYPE</span> sscr_restrict<span class="token punctuation">,</span>
-      ls_optlist  <span class="token keyword">TYPE</span> sscr_opt_list<span class="token punctuation">,</span>
-      ls_ass      <span class="token keyword">TYPE</span> sscr_ass<span class="token punctuation">.</span>
-ls_optlist<span class="token token-operator punctuation">-</span>name       <span class="token operator">=</span> <span class="token string">'OBJECTKEY'</span><span class="token punctuation">.</span>
-ls_optlist<span class="token token-operator punctuation">-</span>options<span class="token token-operator punctuation">-</span>eq <span class="token operator">=</span> abap_true<span class="token punctuation">.</span>   <span class="token eol-comment comment">" 单值</span>
-ls_optlist<span class="token token-operator punctuation">-</span>options<span class="token token-operator punctuation">-</span>bt <span class="token operator">=</span> abap_true<span class="token punctuation">.</span>   <span class="token eol-comment comment">" 区间</span>
-<span class="token keyword">APPEND</span> ls_optlist <span class="token keyword">TO</span> ls_restrict<span class="token token-operator punctuation">-</span>opt_list_tab<span class="token punctuation">.</span>
-ls_ass<span class="token token-operator punctuation">-</span>kind           <span class="token operator">=</span> <span class="token string">'S'</span><span class="token punctuation">.</span>
-ls_ass<span class="token token-operator punctuation">-</span>name           <span class="token operator">=</span> <span class="token string">'S_PERID'</span><span class="token punctuation">.</span>   <span class="token eol-comment comment">" 选择字段</span>
-ls_ass<span class="token token-operator punctuation">-</span>sg_main        <span class="token operator">=</span> <span class="token string">'I'</span><span class="token punctuation">.</span>         <span class="token eol-comment comment">" Sign</span>
-ls_ass<span class="token token-operator punctuation">-</span>sg_addy        <span class="token operator">=</span> <span class="token keyword">space</span><span class="token punctuation">.</span>
-ls_ass<span class="token token-operator punctuation">-</span>op_main        <span class="token operator">=</span> <span class="token string">'OBJECTKEY'</span><span class="token punctuation">.</span>
-<span class="token keyword">APPEND</span> ls_ass <span class="token keyword">TO</span> ls_restrict<span class="token token-operator punctuation">-</span>ass_tab<span class="token punctuation">.</span>
-<span class="token keyword">CALL</span> <span class="token keyword">FUNCTION</span> <span class="token string">'SELECT_OPTIONS_RESTRICT'</span>
-  <span class="token keyword">EXPORTING</span>
-    restriction            <span class="token operator">=</span> ls_restrict
-  <span class="token keyword">EXCEPTIONS</span>
-    too_late               <span class="token operator">=</span> <span class="token number">1</span>
-    repeated               <span class="token operator">=</span> <span class="token number">2</span>
-    selopt_without_options <span class="token operator">=</span> <span class="token number">3</span>
-    selopt_without_signs   <span class="token operator">=</span> <span class="token number">4</span>
-    invalid_sign           <span class="token operator">=</span> <span class="token number">5</span>
-    empty_option_list      <span class="token operator">=</span> <span class="token number">6</span>
-    invalid_kind           <span class="token operator">=</span> <span class="token number">7</span>
-    repeated_kind_a        <span class="token operator">=</span> <span class="token number">8</span>
-    <span class="token keyword">OTHERS</span>                 <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h2 id="PostgreSQL的安装"><a href="#PostgreSQL的安装" class="headerlink" title="PostgreSQL的安装"></a>PostgreSQL的安装</h2><h3 id="1-版本信息"><a href="#1-版本信息" class="headerlink" title="1.版本信息"></a>1.版本信息</h3><ul>
+<li>Centos 7.9</li>
+<li>PostgreSQL 14.1</li>
+</ul>
+<h3 id="2-安装"><a href="#2-安装" class="headerlink" title="2.安装"></a>2.安装</h3><p>采用yum的方式安装</p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> 安装RPM仓库</span>
+sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 
+<span class="token title important"><span class="token punctuation">#</span> 安装PostgreSQL</span>
+sudo yum install -y postgresql14-server
+
+<span class="token title important"><span class="token punctuation">#</span> 初始化数据库:</span>
+sudo /usr/pgsql-14/bin/postgresql-14-setup initdb
+<span class="token title important"><span class="token punctuation">#</span> 开机启动PostgreSQL服务</span>
+sudo systemctl enable postgresql-14
+<span class="token title important"><span class="token punctuation">#</span> 启动PostgreSQL</span>
+sudo systemctl start postgresql-14<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><p>安装完成后，会创建postgres的系统用户，注意这个用户是Linux系统的用户，不是数据库用户</p>
+<ul>
+<li><p>开启远程访问</p>
+<ul>
+<li>修改/var/lib/pgsql/14/data/postgresql.conf文件，取消 listen_addresses 的注释，将参数值改为”*”</li>
+<li>修改/var/lib/pgsql/10/data/pg_hba.conf文件，在末尾添加<code>host   all   all  0.0.0.0/0  md5      </code></li>
+</ul>
+<p><img src="http://imag.fun-ny.cn/img/1031555-20190829213530702-1254443859.png"></p>
+<ul>
+<li>重启PostgreSQL<code>sudo systemctl start postgresql-14</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-为数据库postgres用户添加密码"><a href="#4-为数据库postgres用户添加密码" class="headerlink" title="4.为数据库postgres用户添加密码"></a>4.为数据库postgres用户添加密码</h3><ul>
+<li>从系统的root用户切换到postgres用户</li>
+</ul>
+<p><img src="http://imag.fun-ny.cn/img/image-20220112193315926.png" alt="image-20220112193315926"></p>
+<ul>
+<li>执行<code>psql</code>命令，进入到Postgre命令行</li>
+<li>修改postgres用户的密码</li>
+</ul>
+<p><img src="http://imag.fun-ny.cn/img/image-20220112193804514.png" alt="image-20220112193804514"></p>
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span> alter user postgres with encrypted password '123456';</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>此时可以通过工具连接数据库</p>
 
                 
             </div>
@@ -459,7 +468,7 @@ ls_ass<span class="token token-operator punctuation">-</span>op_main        <spa
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://fun-ny.cn/2021/12/07/abap-xian-zhi-select-options/">https://fun-ny.cn/2021/12/07/abap-xian-zhi-select-options/</a>
+                    <a href="https://fun-ny.cn/2022/01/12/postgresql-an-zhuang/">https://fun-ny.cn/2022/01/12/postgresql-an-zhuang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -497,8 +506,12 @@ ls_ass<span class="token token-operator punctuation">-</span>op_main        <spa
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ABAP/">
-                                    <span class="chip bg-color">ABAP</span>
+                                <a href="/tags/SQL/">
+                                    <span class="chip bg-color">SQL</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                                    <span class="chip bg-color">数据库</span>
                                 </a>
                             
                         </div>
@@ -542,28 +555,82 @@ ls_ass<span class="token token-operator punctuation">-</span>op_main        <spa
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/12/07/abap-xue-xi-bi-ji/">
+                <a href="/2022/01/12/postgresql-an-zhuang/">
                     <div class="card-image">
                         
-                        <img src="https://imag.fun-ny.cn/20418100_1638881942.jpg" class="responsive-img" alt="ABAP学习笔记">
+                        <img src="https://imag.fun-ny.cn/20418100_1638881942.jpg" class="responsive-img" alt="PostgreSQL 安装">
                         
-                        <span class="card-title">ABAP学习笔记</span>
+                        <span class="card-title">PostgreSQL 安装</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ABAP学习的一些笔记
+                            简单记录下PostgreSQL的安装
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
+                                    数据库
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
+                        <span class="chip bg-color">数据库</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/12/24/abap-native-sql/">
+                    <div class="card-image">
+                        
+                        <img src="https://imag.fun-ny.cn/img/4588219.jpg" class="responsive-img" alt="ABAP Native SQL">
+                        
+                        <span class="card-title">ABAP Native SQL</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            ABAP Native SQL的简单使用
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -583,52 +650,8 @@ ls_ass<span class="token token-operator punctuation">-</span>op_main        <spa
                         <span class="chip bg-color">ABAP</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/12/07/java-zi-ding-yi-yi-chang-chu-li/">
-                    <div class="card-image">
-                        
-                        <img src="https://imag.fun-ny.cn/20211207.jpg" class="responsive-img" alt="Java自定义异常处理">
-                        
-                        <span class="card-title">Java自定义异常处理</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Java项目中自定义异常
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-07
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Java/" class="post-category">
-                                    Java
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Java/">
-                        <span class="chip bg-color">Java</span>
+                    <a href="/tags/SQL/">
+                        <span class="chip bg-color">SQL</span>
                     </a>
                     
                 </div>

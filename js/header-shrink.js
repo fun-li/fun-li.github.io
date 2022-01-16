@@ -13,7 +13,21 @@ KEEP.initHeaderShrink = () =&gt; {
       if (!this.isHeaderShrink &amp;&amp; scrollTop &gt; this.headerHeight) {
         this.isHeaderShrink = true;
         document.body.classList.add('header-shrink');
-      } else if (this.isHeaderShrink &amp;&amp; scrollTop &lt;= this.headerheight) { this.isheadershrink="false;" document.body.classlist.remove('header-shrink'); } }, toggleheaderdrawershow() const domlist="[document.querySelector('.window-mask')," document.queryselector('.menu-bar')]; if (keep.theme_config.pjax.enable="==" true) domlist.push(...document.queryselectorall('.header-drawer .drawer-menu-list .drawer-menu-item')); domlist.foreach(v&gt; {
+      } else if (this.isHeaderShrink &amp;&amp; scrollTop &lt;= this.headerHeight) {
+        this.isHeaderShrink = false;
+        document.body.classList.remove('header-shrink');
+      }
+
+    },
+
+    toggleHeaderDrawerShow() {
+      const domList = [document.querySelector('.window-mask'), document.querySelector('.menu-bar')];
+
+      if (KEEP.theme_config.pjax.enable === true) {
+        domList.push(...document.querySelectorAll('.header-drawer .drawer-menu-list .drawer-menu-item'));
+      }
+
+      domList.forEach(v =&gt; {
         v.addEventListener('click', () =&gt; {
           document.body.classList.toggle('header-drawer-show');
         });
@@ -24,4 +38,3 @@ KEEP.initHeaderShrink = () =&gt; {
   KEEP.utils.headerShrink.headerShrink();
   KEEP.utils.headerShrink.toggleHeaderDrawerShow();
 }
-<!--=-->

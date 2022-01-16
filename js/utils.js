@@ -108,7 +108,30 @@ KEEP.initUtils = () =&gt; {
       });
 
       document.querySelector('.tool-font-adjust-minus').addEventListener('click', () =&gt; {
-        if (this.fontSizeLevel &lt;= 0) return; this.fontsizelevel--; setfontsize(this.fontsizelevel); }); }, toggle content area width contentareawidthadjust() { const toolexpanddom="document.querySelector('.tool-expand-width');" headercontentdom="document.querySelector('.header-content');" maincontentdom="document.querySelector('.main-content');" icondom="toolExpandDom.querySelector('i');" defaultmaxwidth="KEEP.theme_config.style.content_max_width" || '1000px'; expandmaxwidth="90%" ; let headermaxwidth="defaultMaxWidth;" isexpand="false;" if (keep.theme_config.style.first_screen.enable="==" true &amp;&amp; window.location.pathname="==" ' ') * 1.2 + 'px'; } setpagewidth="(isExpand)" =&gt; {
+        if (this.fontSizeLevel &lt;= 0) return;
+        this.fontSizeLevel--;
+        setFontSize(this.fontSizeLevel);
+      });
+    },
+
+    // toggle content area width
+    contentAreaWidthAdjust() {
+      const toolExpandDom = document.querySelector('.tool-expand-width');
+      const headerContentDom = document.querySelector('.header-content');
+      const mainContentDom = document.querySelector('.main-content');
+      const iconDom = toolExpandDom.querySelector('i');
+
+      const defaultMaxWidth = KEEP.theme_config.style.content_max_width || '1000px';
+      const expandMaxWidth = '90%';
+      let headerMaxWidth = defaultMaxWidth;
+
+      let isExpand = false;
+
+      if (KEEP.theme_config.style.first_screen.enable === true &amp;&amp; window.location.pathname === '/') {
+        headerMaxWidth = parseInt(defaultMaxWidth) * 1.2 + 'px';
+      }
+
+      const setPageWidth = (isExpand) =&gt; {
         KEEP.styleStatus.isExpandPageWidth = isExpand;
         KEEP.setStyleStatus();
         if (isExpand) {
@@ -337,4 +360,3 @@ KEEP.initUtils = () =&gt; {
   KEEP.utils.setHowLongAgoInHome();
 
 }
-<!--=-->
